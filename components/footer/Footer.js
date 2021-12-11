@@ -2,14 +2,21 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 
-import { container, logo_c, logo, legal_c, legal, holos } from './Footer.module.css';
+import { container, logo_c, logo, legal_c, legal, holos, facebook } from './Footer.module.css';
 
 const Footer = () => {
     return (
         <footer className={container}>
             <div className={logo_c}>
                 <h2 className={logo}>Nicole Azurduy</h2>
-                <FontAwesomeIcon icon={faFacebookSquare} />
+                <a
+                    className={facebook}
+                    href="https://www.facebook.com/fisioterapia.nicole.azurduy"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faFacebookSquare} />
+                </a>
             </div>
             <div className={legal_c}>
                 <Link href='/'>

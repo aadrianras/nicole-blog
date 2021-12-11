@@ -19,6 +19,10 @@
     text-transform: capitalize !important;
 }
 
+.facebook {
+    color: var(--cl3);
+}
+
 .legal_c {
     margin-bottom: 2rem;
     display: flex;
@@ -40,4 +44,17 @@
 .holos > a {
     color: var(--cl3);
     font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo_c, .legal_c {
+        margin-bottom: 0;
+    }
 }

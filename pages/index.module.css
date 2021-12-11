@@ -19,7 +19,7 @@
 }
 
 .phrase {
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     margin: 1rem;
     font-size: 1.4rem;
@@ -30,7 +30,15 @@
     border-radius: .2rem;
     background-color: var(--cl2);
     padding: .5rem 2rem;
+    height: 50px;
     transition: all .3s ease;
+    width: 300px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .whatsapp:hover {
@@ -42,14 +50,6 @@
     max-width: 800px;
 }
 
-.about_c {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
 .nicole_bg {
     background-image: url(/images/bg.jpg);
     background-repeat: repeat;
@@ -57,36 +57,40 @@
     background-size: cover;
     height: 300px;
     margin-top: 2rem;
-    max-width: 400px;
+    margin-bottom: 2rem;
     max-height: 400px;
+    text-align: center;
     width: 100%;
 }
 
 .nicole {
     margin-top: -2rem;
+    width: min(90%, 400px);    
 }
 
-.about_c, .how, .services_c, .blog_c, .testimonials_c {
+.mg {
     margin-bottom: var(--mg);
 }
 
-.about_c, .how, .blog_c, .testimonials_c {
+.max_width {
     max-width: 1200px;
 }
 
 .about {
     padding: 1rem .5rem 0 .5rem;
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 .how_info, .blog_info {
     margin-bottom: 1rem;
 }
 
-.how_steps {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .services {
@@ -125,10 +129,41 @@
     padding: 1rem .5rem;
 }
 
-.blog_cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 1rem;
+/* ------------------------------------------MEDIA QUERIES--------------------------------------------- */
+
+@media screen and (min-width: 425px){
+    .nicole_bg {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 485px){
+    .nicole_bg {
+        margin-bottom: 6rem !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .greeting, .how_info, .title {
+        text-align: center;
+    }    
+
+    .hand_up {
+        height: 250px;
+    }
+
+    .hand_up::after {
+        height: 400px;
+        width: 200px;
+    } 
+    
+    .services{
+        padding: 2rem;
+    }    
+
+    .nicole_bg {
+        margin-bottom: 3rem !important;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -149,27 +184,19 @@
     }
 
     .hand_up::after {
-        margin-left: 12vw;
+        left: 19%;
     } 
 }
 
-@media screen and (min-width: 600px) {
-    .greeting, .how_info, .title {
-        text-align: center;
-    }    
 
-    .hand_up {
-        height: 250px;
+@media screen and (min-width: 1200px) {
+    .grid {
+        gap: 2rem;
     }
-
-    .hand_up::after {
-        height: 400px;
-        width: 200px;
-    } 
-    
-    .services{
-        padding: 2rem;
-    }
-
-    
+     
 }
+
+
+
+
+

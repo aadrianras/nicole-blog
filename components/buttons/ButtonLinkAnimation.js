@@ -15,7 +15,7 @@ const ButtonLinkAnimation = ({ text, toURL }) => {
 };
 
 ButtonLinkAnimation.propTypes = {
-    word: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
     toURL: PropTypes.string.isRequired
 };
 

@@ -20,3 +20,9 @@
     color: var(--cl2);
     font-weight: 400;
 }
+
+@media screen and (min-width: 1200px) {
+    .image {
+        margin-left: 2rem;
+    }
+}
