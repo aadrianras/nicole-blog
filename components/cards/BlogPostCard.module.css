@@ -1,0 +1,22 @@
+.container{
+    background-color: #000;
+    padding: 2rem 1rem;
+} 
+
+.title_s{
+    font-size: 1.2rem;
+}
+
+.sum_s{
+    font-size: .8rem;
+    margin-bottom: 1rem;
+} 
+
+.image {
+    margin-bottom:1rem;
+}
+
+.link_s {
+    color: var(--cl2);
+    font-weight: 400;
+}

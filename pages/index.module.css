@@ -1,0 +1,175 @@
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.header_s {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .1) ), url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phrase {
+    max-width: 700px;
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.whatsapp {
+    border-radius: .2rem;
+    background-color: var(--cl2);
+    padding: .5rem 2rem;
+    transition: all .3s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.greeting {
+    padding: var(--mg) .5rem;
+    max-width: 800px;
+}
+
+.about_c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.nicole_bg {
+    background-image: url(/images/bg.jpg);
+    background-repeat: repeat;
+    background-position:center center;
+    background-size: cover;
+    height: 300px;
+    margin-top: 2rem;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+}
+
+.nicole {
+    margin-top: -2rem;
+}
+
+.about_c, .how, .services_c, .blog_c, .testimonials_c {
+    margin-bottom: var(--mg);
+}
+
+.about_c, .how, .blog_c, .testimonials_c {
+    max-width: 1200px;
+}
+
+.about {
+    padding: 1rem .5rem 0 .5rem;
+    max-width: 500px;
+}
+
+.how_info, .blog_info {
+    margin-bottom: 1rem;
+}
+
+.how_steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1rem;
+}
+
+.services {
+    background-color: #000;
+    padding: 1rem .5rem;
+}
+
+.hand_up {
+    background-image: url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    height: 180px;
+    position: relative;
+    margin-top: 180px;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.hand_up::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-image: url(/images/hands-up.png);
+    background-repeat: no-repeat;
+    background-position:bottom center;
+    background-size: contain;
+    height: 300px;
+    width: 200px;
+    z-index: 5;
+}
+
+.title {
+    padding: 1rem .5rem;
+}
+
+.blog_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+    .services_c {
+        display: flex;
+        width: 100%;
+    }
+
+    .services{
+        max-width: 550px;
+        margin-left: -40rem;
+        margin-top: 10%;
+        position: relative;
+    }
+
+    .hand_up {
+        justify-content: flex-start;
+    }
+
+    .hand_up::after {
+        margin-left: 12vw;
+    } 
+}
+
+@media screen and (min-width: 600px) {
+    .greeting, .how_info, .title {
+        text-align: center;
+    }    
+
+    .hand_up {
+        height: 250px;
+    }
+
+    .hand_up::after {
+        height: 400px;
+        width: 200px;
+    } 
+    
+    .services{
+        padding: 2rem;
+    }
+
+    
+}

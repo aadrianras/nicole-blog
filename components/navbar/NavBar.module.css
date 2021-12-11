@@ -1,0 +1,17 @@
+.container {
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--cl4);
+    font-family: var(--logo) !important;
+    font-size: 2rem;
+    text-transform: capitalize !important;
+}

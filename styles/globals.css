@@ -1,16 +1,125 @@
-html,
-body {
-  padding: 0;
+:root{
+  --text:'Montserrat', sans-serif; /*300 400*/
+  --title: 'IM Fell Double Pica', serif; 
+  --logo: 'Dancing Script', cursive;
+  --mg: 4rem;
+  --cl1: #00D1CD;
+  --cl2: #F30067; 
+  --cl3: #1D2323;
+  --cl4: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --mg: 6rem;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  /*-webkit-tap-highlight-color: transparent;  Remove blue background when click*/
+}
+
+body{
+  background-color: var(--cl3);
+  font-family: var(--text);
+  font-size: 1.1rem;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#__next {
+  height:100%;
+  width: 100;
+}
+
+p{
+  color: var(--cl4);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cl1);
+  font-family: var(--title);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: var(--cl4);
 }
 
-* {
-  box-sizing: border-box;
+svg {
+  font-size: 2rem !important;
+  cursor: pointer;
+}
+
+
+/* These is the style when a text is selected 
+::selection {
+  color: #000;
+  background: #fbd404;
+}
+*/
+
+img,
+video,
+audio {
+  max-width: 100%;
+  height: auto;
+}
+
+label, 
+button, 
+input, 
+select { 
+    cursor: pointer;
+    font-size: 1.1rem; 
+}
+
+label[for] {cursor: pointer;}
+
+
+/*--------------------------------- SCROLLBAR--------------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+} */
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--cl2);
+}
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+}
+*/
+
+@media screen and (min-width: 500px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  } 
 }
