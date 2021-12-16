@@ -1,0 +1,99 @@
+.grid {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        grid-auto-flow: dense;
+        margin: 0 auto;
+}
+
+.grid_top {
+    align-items: flex-start !important;
+}
+
+.mg_bottom {
+    margin-bottom: var(--mg);
+}
+
+.mg_center {
+    margin: 0 auto;
+}
+
+.greeting {
+    padding-top: 5rem;
+}
+
+.collage {
+    width: 100%;
+    text-align: center;
+}
+
+.hi {
+    padding: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hi h2 {
+    font-size: 4rem;
+}
+
+.history, .objective {
+    padding: 1rem .5rem;
+    max-width: 500px;
+}
+
+.hands {
+    height: 12rem;
+    background: url(/images/bg.jpg);
+    margin-top: 9rem;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+}
+
+.hands::before {
+    content: "";
+    background: url(/images/hands.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 350px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 368px;
+    width: 100%;
+    z-index: 2;
+}
+
+.values {
+    padding: 1rem .5rem;
+    text-align: center;
+}
+
+.stethoscope {
+    max-width: 18rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 616px) {
+    .history {
+        grid-column: 2 / 3;
+    }
+    
+    .hands {
+        grid-column: 1 / 2;        
+    }
+
+    .hands::before {
+        height: 450px;
+    }
+
+    .values {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+

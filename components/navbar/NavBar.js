@@ -1,12 +1,96 @@
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { container, logo, menu } from './NavBar.module.css';
+import { container, logo, logo_black, menu, menu_items, menu_button, close_button_c, close_button, icon, link, selected, facebook, follow } from './NavBar.module.css';
 
 const NavBar = () => {
+    const [displayMenu, setDisplayMenu] = useState(false);
+
+    const handleClick = (e) => {
+        if (displayMenu) {
+            e?.target?.className?.includes(`${menu}`) === false ? setDisplayMenu(false) : null;
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('click', handleClick);
+        return () => window.removeEventListener('click', handleClick);
+    });
+
     return (
-        <nav className={container}>
-            <h2 className={logo}>Nicole Azurduy</h2>
-            <p>Menu</p>
-        </nav>
+        <>
+            {
+                displayMenu
+                &&
+                (
+
+                    <div className={`${menu} animate__animated animate__fadeInRightBig`}>
+                        <div className={close_button_c}>
+                            <button className={close_button} onClick={() => setDisplayMenu(false)}>
+                                <FontAwesomeIcon icon={faTimes} className={icon} />
+                            </button>
+                        </div>
+                        <div className={menu_items}>
+                            <Link href='/'>
+                                <a>
+                                    <h2 className={logo_black}>Nicole Azurduy</h2>
+                                </a>
+                            </Link>
+                            <div>
+                                <Link href='/'>
+                                    <a>
+                                        <p className={`${link} ${selected}`}>Inicio</p>
+                                    </a>
+                                </Link>
+                                <Link href='/'>
+                                    <a>
+                                        <p className={`${link} `}>Quienes somos</p>
+                                    </a>
+                                </Link>
+                                <Link href='/'>
+                                    <a>
+                                        <p className={`${link} `}>Servicios</p>
+                                    </a>
+                                </Link>
+                                <Link href='/'>
+                                    <a>
+                                        <p className={`${link} `}>Blog</p>
+                                    </a>
+                                </Link>
+                            </div>
+                            <div>
+                                <p className={follow}>Sigueme en</p>
+                                <a
+                                    className={facebook}
+                                    href="https://www.facebook.com/fisioterapia.nicole.azurduy"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <FontAwesomeIcon icon={faFacebookSquare} />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                )
+            }
+            <nav className={container}>
+                <Link href='/'>
+                    <a>
+                        <h2 className={logo}>Nicole Azurduy</h2>
+                    </a>
+                </Link>
+                <p
+                    className={menu_button}
+                    onClick={() => setDisplayMenu(true)}
+                >
+                    Menu
+                </p>
+            </nav>
+        </>
     );
 }
 

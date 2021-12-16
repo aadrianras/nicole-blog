@@ -6,8 +6,10 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Step from '../components/cards/Step';
 import ContactBox from '../components/contact/ContactBox';
 import Testimonials from '../components/testimonials/Testimonials';
+import Services from '../components/services/Services';
+import HomeHero from '../components/Heros/HomeHero';
 
-import { container, header_s, phrase, whatsapp, greeting, about, nicole_bg, nicole, how, how_info, services_c, services, hand_up, title, blog_c, blog_info, grid, mg, max_width } from './index.module.css';
+import { container, header_s, phrase, whatsapp, greeting, about, nicole_bg, nicole, how, how_info, title, blog_c, blog_info, grid, mg, max_width } from './index.module.css';
 
 const index = ({ data: { clientsOpinion } }) => {
   return (
@@ -27,7 +29,7 @@ const index = ({ data: { clientsOpinion } }) => {
           Haz una cita
         </a>
       </header>
-
+      {/* <HomeHero /> This component has an animated background*/}
 
       <div className={greeting}>
         <h2>¡Hola! Que bueno que estes aquí.</h2>
@@ -42,7 +44,7 @@ const index = ({ data: { clientsOpinion } }) => {
         <div className={about}>
           <h3>Mi pasión es ayudar</h3>
           <p>Qui magna cillum irure amet culpa deserunt excepteur magna nostrud esse voluptate labore quis. Eiusmod ut nulla consequat irure est. Tempor pariatur commodo ex irure culpa ad officia laborum irure incididunt commodo velit adipisicing. Id fugiat enim irure fugiat nulla excepteur minim nisi.</p>
-          <ButtonLinkAnimation text={'Conóceme'} toURL={'/'} />
+          <ButtonLinkAnimation text={'Conóceme'} toURL={'/sobre-mi'} />
         </div>
       </div>
 
@@ -78,14 +80,7 @@ const index = ({ data: { clientsOpinion } }) => {
       </div>
 
 
-      <div className={`${services_c} ${mg}`}>
-        <div className={hand_up}></div>
-        <div className={services}>
-          <h3>¿Qué servicios ofrezco?</h3>
-          <p>Amet laborum amet minim minim magna proident elit do. Non officia sunt ex nulla id. Officia labore proident culpa excepteur ea culpa amet anim pariatur ut incididunt qui. Cupidatat anim incididunt cillum fugiat tempor voluptate fugiat cillum consequat. Eiusmod nulla aliqua ipsum amet occaecat aliquip proident sunt commodo ullamco minim enim.</p>
-          <ButtonLinkAnimation text={'Más información'} toURL={'/'} />
-        </div>
-      </div>
+      <Services />
 
 
       <div className={`${blog_c} ${mg} ${max_width}`}>
