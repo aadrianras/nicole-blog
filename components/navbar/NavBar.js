@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { container, logo, logo_black, menu, menu_items, menu_button, close_button_c, close_button, icon, link, selected, facebook, follow } from './NavBar.module.css';
+import { container, logo, logo_black, menu, menu_items, menu_button, close_button_c, close_button, icon, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
 
 const NavBar = () => {
     const [displayMenu, setDisplayMenu] = useState(false);
@@ -45,12 +45,12 @@ const NavBar = () => {
                                         <p className={`${link} ${selected}`}>Inicio</p>
                                     </a>
                                 </Link>
-                                <Link href='/'>
+                                <Link href='/sobre-mi'>
                                     <a>
-                                        <p className={`${link} `}>Quienes somos</p>
+                                        <p className={`${link} `}>Sobre mí</p>
                                     </a>
                                 </Link>
-                                <Link href='/'>
+                                <Link href='/servicios'>
                                     <a>
                                         <p className={`${link} `}>Servicios</p>
                                     </a>
@@ -61,7 +61,7 @@ const NavBar = () => {
                                     </a>
                                 </Link>
                             </div>
-                            <div>
+                            <div className={follow_c}>
                                 <p className={follow}>Sigueme en</p>
                                 <a
                                     className={facebook}

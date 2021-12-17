@@ -25,13 +25,14 @@
 }
 
 .menu_button {
-    font-weight: 400;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .menu_button:hover {
-    color: var(--cl3);
+    color: var(--cl2);
 }
+
 
 .close_button_c {
     text-align: right;
@@ -71,6 +72,7 @@
 
 .link {
     margin-bottom: 1.2rem;
+    text-align: center;
 }
 
 .link:nth-last-child() {
@@ -90,6 +92,10 @@
 
 .follow {
     margin-bottom: 1rem;
+}
+
+.follow_c {
+    text-align: center;
 }
 
 @media screen and (min-width: 500px) {

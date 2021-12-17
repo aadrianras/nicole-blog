@@ -1,5 +1,6 @@
 .container {
-    margin-bottom: var(--mg);
+    background-color: rgba(29, 35, 35, .8);
+    margin: 0 auto var(--mg) auto;
     max-width: 800px;
     padding: 1rem .5rem;
     text-align:center;

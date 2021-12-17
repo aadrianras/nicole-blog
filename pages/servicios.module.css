@@ -1,0 +1,180 @@
+.hero {
+    max-width: 1200px;
+    padding-top: 6rem;
+    margin: 0 auto var(--mg) auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    grid-auto-flow: dense;
+}
+
+.hero_text {
+    padding: 0 .5rem;
+}
+
+.hero_text h1{
+    font-size: 3rem;
+}
+
+.common {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.common h6 {
+    font-size: 3rem;
+    padding: 0 .5rem;
+    max-width: 300px;
+    margin-bottom: var(--mg);
+}
+
+.title{
+    color: var(--cl4);
+    font-size: clamp(2.3rem, 7vw, 5rem);
+    text-align: center;
+    max-width: 900px;
+}
+
+.masotherapy, .kinesitherapy, .electrotherapy, .respiratory {
+    position: relative;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.masotherapy::before {
+    content: "";
+    background-image: url(/images/masoterapia.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(-11deg);
+    z-index: -1;
+} 
+
+.masotherapy::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(-11deg);
+    z-index: -1;
+}
+
+
+.kinesitherapy::before {
+    content: "";
+    background-image: url(/images/cinesiterapia.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(11deg);
+    z-index: -1;
+} 
+
+.kinesitherapy::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(11deg);
+    z-index: -1;
+}
+
+
+.electrotherapy::before {
+    content: "";
+    background-image: url(/images/electroterapia.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(-11deg);
+    z-index: -1;
+} 
+
+.electrotherapy::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(-11deg);
+    z-index: -1;
+}
+
+
+.respiratory::before {
+    content: "";
+    background-image: url(/images/terapia-respiratoria.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(11deg);
+    z-index: -1;
+} 
+
+.respiratory::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(11deg);
+    z-index: -1;
+}
+
+
+.description {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem .5rem;
+}
+
+.description:last-of-type {
+    margin-bottom: var(--mg);
+}
+
+.division {
+    background-image: url(/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100px;
+    width: 65%;
+    margin-bottom: var(--mg);
+    transform: skewY(-3deg);
+}
+
+@media screen and (min-width: 600px) {
+    .masotherapy, .kinesitherapy, .electrotherapy, .respiratory {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .hero {
+        grid-template-columns: 1fr 350px;
+    }
+    
+    .hero_text {
+        grid-column: 2/3;
+    }
+}
