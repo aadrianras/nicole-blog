@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import ButtonLinkAnimation from '../components/buttons/ButtonLinkAnimation';
 import BlogPostCard from '../components/cards/BlogPostCard';
@@ -9,7 +10,7 @@ import Testimonials from '../components/testimonials/Testimonials';
 import Services from '../components/services/Services';
 import HomeHero from '../components/Heros/HomeHero';
 
-import { container, header_s, phrase, whatsapp, greeting, about, nicole_bg, nicole, how, how_info, title, blog_c, blog_info, grid, mg, max_width } from './index.module.css';
+import { container, header_s, phrase, whatsapp, greeting, about, nicole_bg, nicole, how, how_info, title, blog_c, blog_info, grid, grid_steps, mg, max_width } from './index.module.css';
 
 const index = ({ data: { clientsOpinion } }) => {
   return (
@@ -17,8 +18,7 @@ const index = ({ data: { clientsOpinion } }) => {
 
 
       <header className={header_s}>
-        <p className={phrase}>Mantener una buena salud debería ser el objetivo principal de todos nosotros.
-        </p>
+        <p className={phrase}>La felicidad y el bienestar empiezan con una buena salud.</p>
         <a
           className={whatsapp}
           href='https://wa.me/+59178916557'
@@ -33,7 +33,7 @@ const index = ({ data: { clientsOpinion } }) => {
 
       <div className={greeting}>
         <h2>¡Hola! Que bueno que estes aquí.</h2>
-        <p>Qui magna cillum irure amet culpa deserunt excepteur magna nostrud esse voluptate labore quis. Eiusmod ut nulla consequat irure est. Tempor pariatur commodo ex irure culpa ad officia laborum irure incididunt commodo velit adipisicing. Id fugiat enim irure fugiat nulla excepteur minim nisi.</p>
+        <p>Te doy la bienvenida a mi consultorio virtual de Fisioterapia. Si deseas conocer mi información personal y profesional puedes visitar la página "Sobre mí". Por otra parte, si deseas conocer sobre mi trabajo puedes visitar la página "Servicios". Además, en la página "Blog" encontrarás artículos que podrían ayudarte a resolver alguna duda. Finalmente, si no encuentras lo que estas buscando no dudes en contactarme y te ayudare con mucho gusto.</p>
       </div>
 
 
@@ -43,7 +43,7 @@ const index = ({ data: { clientsOpinion } }) => {
         </div>
         <div className={about}>
           <h3>Mi pasión es ayudar</h3>
-          <p>Qui magna cillum irure amet culpa deserunt excepteur magna nostrud esse voluptate labore quis. Eiusmod ut nulla consequat irure est. Tempor pariatur commodo ex irure culpa ad officia laborum irure incididunt commodo velit adipisicing. Id fugiat enim irure fugiat nulla excepteur minim nisi.</p>
+          <p>Para mi cada paciente y su familia son especiales y tienen necesidades unicas. Por lo tanto, los planes de tratamiento son diseñados de manera personalizada, basado en diferentes técnicas profesionales que permiten obtener resultados en el menor plazo posible mientras se genera bienestar y calidad de vida.</p>
           <ButtonLinkAnimation text={'Conóceme'} toURL={'/sobre-mi'} />
         </div>
       </div>
@@ -52,29 +52,29 @@ const index = ({ data: { clientsOpinion } }) => {
       <div className={`${how} ${mg} ${max_width}`}>
         <div className={how_info}>
           <h4>¿Cómo trabajo?</h4>
-          <p>Dolor qui duis Lorem labore velit.</p>
+          <p>Usualmente sigo estos tres pasos al atender a un paciente.</p>
         </div>
-        <div className={grid}>
+        <div className={`${grid} ${grid_steps}`}>
           <Step
             image='step1.png'
-            alt='Evaluación fisica'
+            alt='Evaluación del paciente'
             number='1.'
-            title='Realizo una evaluación'
-            desc='Lorem ipsum dolor sit amet consectetur adipiscing elit, laoreet ultrices natoque interdum torquent netus iaculis eu, sollicitudin varius suscipit lob.'
+            title='Evaluación del paciente'
+            desc='Realizo una exploración fisica general para determinar si existen alteraciones y el grado de las mismas.'
           />
           <Step
             image='step2.png'
-            alt='Planifico un tratamiento'
+            alt='Planificación del tratamiento'
             number='2.'
-            title='Planifico un tratamiento'
-            desc='Lorem ipsum dolor sit amet consectetur adipiscing elit, laoreet ultrices natoque interdum torquent netus iaculis eu, sollicitudin varius suscipit lob.'
+            title='Planificación del tratamiento'
+            desc='Cada paciente es un ser único, por lo tanto, planifico un tratamiento efectivo a corto, mediano y largo plazo que se adapte a sus necesidades.'
           />
           <Step
             image='step3.png'
-            alt='Rehabilito al paciente'
+            alt='Rehabilitación del paciente'
             number='3.'
-            title='Rehabilito al paciente'
-            desc='Lorem ipsum dolor sit amet consectetur adipiscing elit, laoreet ultrices natoque interdum torquent netus iaculis eu, sollicitudin varius suscipit lob.'
+            title='Rehabilitación del paciente'
+            desc='Realizo las sesiones planificadas y en cada una de ellas hago una evaluación de progreso para reestructurar el tratamiento si es necesario.'
           />
         </div>
       </div>
@@ -82,14 +82,14 @@ const index = ({ data: { clientsOpinion } }) => {
 
       <Services />
 
-
+      {/* 
       <div className={`${blog_c} ${mg} ${max_width}`}>
         <div className={title}>
           <h3>Blog</h3>
           <p className={blog_info}>Elit consectetur dolore nostrud duis reprehenderit.</p>
         </div>
         <div className={grid}>
-          {/* We should slice the summary */}
+           We should slice the summary (This line is a commentary)
           <BlogPostCard
             title='Secuela del COVID-19 en la respiración y ejercicios para realizar en casa'
             summary='Irure nulla laborum voluptate proident sit cupidatat fugiat ipsum nulla ullamco mollit et magna. Occaecat aute quis qui ea adipisicing eiusmod consectetur cupidatat consequat. Esse quis pariatur et laborum reprehenderit ad ut ex laboris ad incididunt consectetur aute. Ullamco dolore culpa commodo dolore mollit mollit incididunt sint ut esse do non ex. Incididunt mollit officia tempor ad enim ea esse. Exercitation sunt aliquip incididunt ea deserunt minim non velit dolor sunt do.'
@@ -103,7 +103,8 @@ const index = ({ data: { clientsOpinion } }) => {
             summary='Irure nulla laborum voluptate proident sit cupidatat fugiat ipsum nulla ullamco mollit et magna. Occaecat aute quis qui ea adipisicing eiusmod consectetur cupidatat consequat. Esse quis pariatur et laborum reprehenderit ad ut ex laboris ad incididunt consectetur aute. Ullamco dolore culpa commodo dolore mollit mollit incididunt sint ut esse do non ex. Incididunt mollit officia tempor ad enim ea esse. Exercitation sunt aliquip incididunt ea deserunt minim non velit dolor sunt do.'
           />
         </div>
-      </div>
+      </div> 
+    */}
 
 
       <Testimonials clientsOpinion={clientsOpinion} />

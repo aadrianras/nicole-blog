@@ -1,4 +1,8 @@
 .step {
+    padding: 0;
+}
+
+.content {
     padding: 0 .5rem;
 }
 
@@ -7,7 +11,7 @@
 }
 
 .step_title span {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 @media (min-width: 426px) {
@@ -17,4 +21,8 @@
         flex-flow: column;
         align-items: center;
     }    
+    
+    .content {
+        padding: 0;
+    }
 }

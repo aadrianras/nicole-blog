@@ -20,10 +20,12 @@
 
 .phrase {
     max-width: 800px;
+    text-transform: uppercase;
     text-align: center;
     margin: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 400;
+    font-family: var(--title);
 }
 
 .whatsapp {
@@ -82,7 +84,7 @@
 }
 
 .how_info, .blog_info {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 0 .5rem;
 }
 
@@ -94,7 +96,10 @@
     align-items: center;
 }
 
-
+.grid_steps {
+    align-items: flex-start !important;
+    gap: 1rem !important;
+}
 
 .title {
     padding: 1rem .5rem;

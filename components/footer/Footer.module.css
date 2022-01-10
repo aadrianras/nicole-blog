@@ -1,7 +1,11 @@
 .container {
-    background-color: var(--cl1);
+    background-color: var(--cl2);
     padding: 2rem 1rem;
     margin-top: var(--mg);
+}
+
+.logo, .facebook, .legal, .holos, .holos > a  {
+    color: var(--cl4);
 }
 
 .logo_c {
@@ -13,14 +17,9 @@
 }
 
 .logo {
-    color: var(--cl3);
     font-family: var(--logo) !important;
     font-size: 2.2rem;
     text-transform: capitalize !important;
-}
-
-.facebook {
-    color: var(--cl3);
 }
 
 .legal_c {
@@ -32,17 +31,14 @@
 }
 
 .legal {
-    color: var(--cl3);
     font-size: .8rem;
 }
 
 .holos {
     text-align: center;
-    color: var(--cl3);
 }
 
 .holos > a {
-    color: var(--cl3);
     font-weight: bold;
 }
 

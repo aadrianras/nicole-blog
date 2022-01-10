@@ -7,7 +7,8 @@ const Services = () => {
             <div className={hand_up}></div>
             <div className={services}>
                 <h3>¿Qué servicios ofrezco?</h3>
-                <p>Amet laborum amet minim minim magna proident elit do. Non officia sunt ex nulla id. Officia labore proident culpa excepteur ea culpa amet anim pariatur ut incididunt qui. Cupidatat anim incididunt cillum fugiat tempor voluptate fugiat cillum consequat. Eiusmod nulla aliqua ipsum amet occaecat aliquip proident sunt commodo ullamco minim enim.</p>
+                <p>La Fisioterapia es una disciplina del área de salud que tiene como objetivo diagnosticar, prevenir, tratar y/o rehabilitar diferentes tipos de dolencias, tanto agudas como crónicas, por medio de las siguientes técnicas especializadas:</p>
+                <p>Crioterapia, Termoterapia, Masoterápia, Fisioterapia Respiratoria y Cinesiterapia.</p>
                 <ButtonLinkAnimation text={'Más información'} toURL={'/servicios'} />
             </div>
         </div>

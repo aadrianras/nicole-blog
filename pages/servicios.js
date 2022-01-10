@@ -46,9 +46,9 @@ const servicios = ({ data: { clientsOpinion } }) => {
             <p className={description}>Fugiat magna veniam commodo enim ea fugiat officia nisi nulla cillum. Duis aliqua proident aliquip aute ipsum nulla quis enim reprehenderit esse laboris. Exercitation proident esse anim eiusmod sit voluptate dolor commodo dolore. Nostrud ad laboris velit reprehenderit ex do reprehenderit ex mollit aliquip velit mollit. Veniam dolore reprehenderit incididunt anim nostrud voluptate ullamco est est excepteur. Ipsum consectetur dolore nulla sint fugiat tempor minim do. Lorem mollit minim proident officia excepteur pariatur ad laboris nisi tempor nostrud Lorem consectetur.</p>
 
 
-            <div className={division}></div>
+            {/* <div className={division}></div>
 
-            <Testimonials clientsOpinion={clientsOpinion} />
+            <Testimonials clientsOpinion={clientsOpinion} /> */}
             <ContactBox />
         </main>
     );
