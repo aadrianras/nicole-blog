@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +9,7 @@ import { container, logo, logo_black, menu, menu_items, menu_button, close_butto
 
 const NavBar = () => {
     const [displayMenu, setDisplayMenu] = useState(false);
+    const { pathname } = useRouter();
 
     const handleClick = (e) => {
         if (displayMenu) {
@@ -42,22 +44,22 @@ const NavBar = () => {
                             <div>
                                 <Link href='/'>
                                     <a>
-                                        <p className={`${link} ${selected}`}>Inicio</p>
+                                        <p className={`${link} ${pathname === '/' ? selected : ''}`}>Inicio</p>
                                     </a>
                                 </Link>
                                 <Link href='/sobre-mi'>
                                     <a>
-                                        <p className={`${link} `}>Sobre mí</p>
+                                        <p className={`${link} ${pathname === '/sobre-mi' ? selected : ''}`}>Sobre mí</p>
                                     </a>
                                 </Link>
                                 <Link href='/servicios'>
                                     <a>
-                                        <p className={`${link} `}>Servicios</p>
+                                        <p className={`${link} ${pathname === '/servicios' ? selected : ''}`}>Servicios</p>
                                     </a>
                                 </Link>
                                 <Link href='/'>
                                     <a>
-                                        <p className={`${link} `}>Blog</p>
+                                        <p className={`${link} ${pathname === '/blog' ? selected : ''}`}>Blog</p>
                                     </a>
                                 </Link>
                             </div>
@@ -73,7 +75,6 @@ const NavBar = () => {
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 )
             }

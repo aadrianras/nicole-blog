@@ -12,7 +12,7 @@ const sobreMi = () => {
             <div className={`${grid} ${greeting} ${mg_bottom}`}>
                 <div className={hi}>
                     <h2>¡Hola!</h2>
-                    <p>Amet cupidatat non commodo cillum aliqua voluptate eiusmod nostrud deserunt et eiusmod quis Lorem ut. Sit duis exercitation culpa Lorem aute laborum deserunt anim magna id aliquip. Esse magna ex in dolor commodo est excepteur.</p>
+                    <p>Que bueno que desees conocerme. Soy Fisioterapeuta y Kinesiologa, ademas me encuentro cursado la carrera de Medicina. Estoy casada y soy madre. En mi tiempo libre, me encanta escuchar música ranchera mientras conduzco mi motocicleta o jugar a las cartas con mi familia. Finalmente, lo que más felicidad me otorga es poder trabajar en lo que me apasiona, ayudando a las personas.</p>
                 </div>
                 <div className={collage}>
                     <img className={mg_center} src='/images/collage.png' alt='Collage Nicole Azurduy Fisioterapeuta' />
@@ -23,7 +23,7 @@ const sobreMi = () => {
             <div className={`${grid} ${mg_bottom}`}>
                 <div className={history}>
                     <h2>Mi historia</h2>
-                    <p>Voluptate reprehenderit pariatur laboris sunt magna eiusmod est do cupidatat occaecat nisi enim. Do elit id anim aliqua laborum eu sit laborum velit adipisicing labore esse. Dolore eiusmod exercitation duis cillum qui deserunt commodo eu nisi magna duis mollit. Aute exercitation exercitation exercitation et laboris magna ullamco tempor. Aliquip qui tempor amet occaecat exercitation aliqua ea fugiat velit commodo aliqua velit.</p>
+                    <p>Nací y vivo en La Paz, Bolivia. Estudie Fisioterapia y Kinesiología en la Universidad Central y estoy cursando la carrera de Medicina en la Universidad Nuestra Señora de La Paz. He trabajado en el Centro Integral Mary Andrea y en el Centro de Rehabilitación Vida Nueva. Sin embargo, donde encontre satisfacción es ejerciendo mi carrera independientemente.</p>
                 </div>
                 <div className={hands}></div>
             </div>
@@ -34,28 +34,28 @@ const sobreMi = () => {
                 <div className={`${grid} ${grid_top}`}>
                     <ValueCard
                         image='f1.png'
-                        title='Profesionalismo'
-                        text='Incididunt sunt minim nostrud irure. Id velit nostrud dolor incididunt. Amet ex reprehenderit voluptate nisi do consequat voluptate. Aliqua proident non ex commodo tempor mollit velit amet.'
+                        title='Compromiso'
+                        text='No considero mi trabajo un acto obligatorio que debo realizar, sino una actividad personal que me permite mejorar día a día.'
                     />
                     <ValueCard
                         image='f2.png'
-                        title='Honestidad'
-                        text='Occaecat do laborum exercitation laborum dolor incididunt culpa in sint laboris veniam laborum amet fugiat. Non ea est deserunt nulla id eu proident. Cillum magna occaecat nostrud ut id dolore irure non esse reprehenderit voluptate. Veniam in irure labore enim est veniam.'
+                        title='Motivación'
+                        text='Realizo mi trabajo con mucha pasión porque me emociona cuando un paciente se rehabilita por completo.'
                     />
                     <ValueCard
                         image='f3.png'
                         title='Empatia'
-                        text='Occaecat sint commodo officia deserunt nulla. Occaecat cillum adipisicing labore amet ad cillum consectetur consectetur culpa occaecat dolore reprehenderit laboris enim. Anim laboris aliquip esse culpa consectetur ipsum nulla.'
+                        text='Siempre estoy conciente sobre los sentimientos y deseos de mis pacientes.'
                     />
                 </div>
             </div>
 
-            <div className={`${grid}`}>
+            <div className={`${grid} ${mg_bottom}`}>
                 <div className={objective}>
                     <h2>Mi objetivo</h2>
-                    <p>Reprehenderit qui proident officia officia et veniam do cupidatat adipisicing nostrud commodo ad. Fugiat mollit ullamco pariatur non. Nulla aliqua est consectetur minim aute tempor dolore excepteur non in est. Ex sint aute eu nisi eiusmod id ut adipisicing amet aliqua minim irure. Incididunt ullamco veniam ullamco voluptate fugiat. Ut reprehenderit deserunt nisi mollit ullamco nulla laboris aliqua nulla do officia cillum consectetur culpa.</p>
+                    <p>A traves de la constante capacitación y crecimiento, combinando la Fisioterapia y la Medicina pretendo abrir un Centro Integral de Rehabilitación Multidisciplinario, el cual.</p>
                 </div>
-                <img className={`${mg_center} ${stethoscope}`} src='/images/stethoscope.png' alt='Stethoscope' />
+                <img className={`${mg_center} ${stethoscope}`} src='/images/med.png' alt='Stethoscope' />
             </div>
 
 

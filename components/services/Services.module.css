@@ -7,6 +7,10 @@
     padding: 1rem .5rem;
 }
 
+.services p {
+    margin-bottom: .5rem;
+}
+
 .hand_up {
     background-image: url(/images/bg.jpg);
     background-repeat: no-repeat;
