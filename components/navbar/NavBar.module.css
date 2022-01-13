@@ -36,7 +36,7 @@
 
 .close_button_c {
     text-align: right;
-    padding: 1rem;
+    padding:  1rem 1rem 0rem 1rem;
 }
 
 .close_button {
@@ -61,10 +61,11 @@
 }
 
 .menu_items {
-    padding: 0rem 3rem;
+    padding: 0rem 1rem;
     height: 100%;
 
     display: flex;
+    gap: 0;
     flex-flow: column;
     justify-content: space-evenly;
     align-items: stretch;
@@ -75,7 +76,7 @@
     text-align: center;
 }
 
-.link:nth-last-child() {
+.last_link {
     margin-bottom: 0;
 }
 

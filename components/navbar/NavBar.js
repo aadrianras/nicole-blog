@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { container, logo, logo_black, menu, menu_items, menu_button, close_button_c, close_button, icon, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
+import { container, logo, logo_black, menu, menu_items, menu_button, close_button_c, close_button, icon, last_link, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
 
 const NavBar = () => {
     const [displayMenu, setDisplayMenu] = useState(false);
@@ -59,7 +59,7 @@ const NavBar = () => {
                                 </Link>
                                 <Link href='/'>
                                     <a>
-                                        <p className={`${link} ${pathname === '/blog' ? selected : ''}`}>Blog</p>
+                                        <p className={`${link} ${last_link} ${pathname === '/blog' ? selected : ''}`}>Blog</p>
                                     </a>
                                 </Link>
                             </div>
