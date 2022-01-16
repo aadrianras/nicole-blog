@@ -59,15 +59,14 @@
     background-size: cover;
     height: 300px;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     max-height: 400px;
     text-align: center;
     width: 100%;
 }
 
 .nicole {
-    margin-top: -2rem;
-    width: min(90%, 400px);    
+    width: min(100%, 400px);  
 }
 
 .mg {

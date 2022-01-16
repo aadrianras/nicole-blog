@@ -153,14 +153,6 @@
     margin-bottom: var(--mg);
 }
 
-.division {
-    background-image: url(/images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:100px;
-    width: 65%;
-    margin-bottom: var(--mg);
-}
 
 @media screen and (min-width: 600px) {
     .masotherapy, .kinesitherapy, .electrotherapy, .respiratory {
