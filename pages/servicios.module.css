@@ -39,7 +39,7 @@
     max-width: 900px;
 }
 
-.masotherapy, .kinesitherapy, .electrotherapy, .respiratory {
+.treatment {
     position: relative;
     height: 480px;
     display: flex;
@@ -47,100 +47,86 @@
     align-items: center;
 }
 
-.masotherapy::before {
+.treatment:nth-of-type(odd)::after {
     content: "";
-    background-image: url(/images/masoterapia.png);
+    background: rgba(17,17,17,.3);
+    position: absolute;
+    height: 400px;
+    overflow: hidden;
+    width: min(100%, 1000px);
+    transform: skewY(-6deg);
+    z-index: -1;
+}
+
+.treatment:nth-of-type(odd)::before {
+    content: "";
     background-repeat: no-repeat;
     background-position:center center;
     background-size: cover;
     position: absolute;
     height: 400px;
     width: min(100%, 1000px);
-    transform: skewY(-11deg);
+    transform: skewY(-6deg);
     z-index: -1;
 } 
 
-.masotherapy::after {
+.treatment:nth-of-type(even)::after {
     content: "";
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(17,17,17,.3);
     position: absolute;
     height: 400px;
     width: min(100%, 1000px);
-    transform: skewY(-11deg);
+    transform: skewY(6deg);
     z-index: -1;
 }
+
+.treatment:nth-of-type(even)::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    position: absolute;
+    height: 400px;
+    width: min(100%, 1000px);
+    transform: skewY(6deg);
+    z-index: -1;
+} 
+
+.masotherapy::before {
+    background-image: url(/images/terapia-manual.jpg);
+
+
+} 
 
 
 .kinesitherapy::before {
-    content: "";
-    background-image: url(/images/cinesiterapia.png);
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size: cover;
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(11deg);
-    z-index: -1;
+    background-image: url(/images/cinesiterapia.jpg);
 } 
 
-.kinesitherapy::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(11deg);
-    z-index: -1;
-}
 
 
 .electrotherapy::before {
-    content: "";
-    background-image: url(/images/electroterapia.png);
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size: cover;
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(-11deg);
-    z-index: -1;
+    content: "";    background-image: url(/images/electroterapia.jpg);
 } 
-
-.electrotherapy::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(-11deg);
-    z-index: -1;
-}
 
 
 .respiratory::before {
-    content: "";
-    background-image: url(/images/terapia-respiratoria.png);
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size: cover;
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(11deg);
-    z-index: -1;
+    background-image: url(/images/terapia-respiratoria.jpg);
 } 
 
-.respiratory::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(11deg);
-    z-index: -1;
+
+.lymphatic::before {
+    background-image: url(/images/drenaje-linfatico.jpg);
 }
+
+.geriatric::before {
+    background-image: url(/images/terapia-geriatrica.jpg);
+}
+
+.neurological::before {
+    background-image: url(/images/terapia-neurologica.jpg);
+}
+
 
 
 .description {

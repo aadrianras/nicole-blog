@@ -3,10 +3,10 @@
   --title: 'IM Fell Double Pica', serif; 
   --logo: 'Dancing Script', cursive;
   --mg: min(10vw, 6rem);
-  --cl1: #00D1CD;
-  --cl2: #9A0680; 
+  --cl1: #00d1cd;
+  --cl2: #9a0680; 
   --cl3: #111111;
-  --cl4: #fff;
+  --cl4: #ffffff;
 }
 
 html {
@@ -35,7 +35,7 @@ body{
 
 #__next {
   height:100%;
-  width: 100;
+  width: 100%;
 }
 
 p{
