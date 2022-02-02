@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { container, logo, logo_black, menu, menu_items, menu_button, close_button_c, close_button, icon, last_link, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
+import { container, logo, logo_menu, menu, menu_items, menu_button, close_button_c, close_button, icon, last_link, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
+import Image from 'next/image';
 
 const NavBar = () => {
     const [displayMenu, setDisplayMenu] = useState(false);
@@ -37,8 +38,8 @@ const NavBar = () => {
                         </div>
                         <div className={menu_items}>
                             <Link href='/'>
-                                <a>
-                                    <h2 className={logo_black}>Nicole Azurduy</h2>
+                                <a className={logo_menu}>
+                                    <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
                                 </a>
                             </Link>
                             <div>
@@ -80,8 +81,8 @@ const NavBar = () => {
             }
             <nav className={container}>
                 <Link href='/'>
-                    <a>
-                        <h2 className={logo}>Nicole Azurduy</h2>
+                    <a className={logo}>
+                        <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
                     </a>
                 </Link>
                 <p

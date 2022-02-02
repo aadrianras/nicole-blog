@@ -1,0 +1,127 @@
+.container {
+    padding-bottom: 4rem;
+}
+
+.hero{
+    height: 100vh;
+    padding: 1rem .5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.big_text{
+    max-width: 50rem;
+    font-size: clamp(3rem, 8vw, 4rem);
+    text-align: center;
+} 
+
+.hero_content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon{
+    color: var(--cl4);
+} 
+
+.line {
+    background-color: var(--cl2);
+    width: clamp(2rem, 15vw, 10rem);
+    height: 3px;
+}
+
+.paragraph {
+    padding: 0 .5rem;
+    margin-bottom: var(--mg);
+}
+
+.subtitle {
+    margin: 0 auto 1rem auto;
+    font-size: 2.5rem;
+    max-width: 50rem;
+}
+
+.treatments {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.treatments > h2 {
+    padding: 0 .5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.treatment{
+    margin-bottom: var(--mg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.treatment_img {
+    width: min(100%, 425px);
+    margin-left: auto;
+}
+
+.treatment_content {
+    padding: 0 .5rem;
+    width: min(100%, 425px);
+}
+
+.team_c {
+    margin: 0 auto var(--mg) auto;
+    max-width: 60rem;
+}
+
+.team_title {
+    margin-bottom: 2rem;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 2rem 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(0,0,0, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+
+    display: flex;
+    gap: .5rem;
+}
+
+.card_content {
+    padding: 1rem 0rem;
+}
+
+.card h3 {
+    font-family: var(--text);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.card img {
+    max-width: 100px;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
+
+.small {
+    font-size: .8rem;
+}

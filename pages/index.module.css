@@ -23,7 +23,7 @@
     text-transform: uppercase;
     text-align: center;
     margin: 1rem;
-    font-size: 1.8rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 400;
     font-family: var(--title);
 }
@@ -53,16 +53,8 @@
 }
 
 .nicole_bg {
-    background-image: url(/images/bg.jpg);
-    background-repeat: repeat;
-    background-position:center center;
-    background-size: cover;
-    height: 300px;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    max-height: 400px;
+    position: relative;
     text-align: center;
-    width: 100%;
 }
 
 .nicole {
