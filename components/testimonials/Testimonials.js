@@ -11,7 +11,7 @@ const Testimonials = ({ clientsOpinion }) => {
         <div className={container}>
             <div className={title}>
                 <h3>Testimonios</h3>
-                <p>Officia exercitation dolor aute velit ex commodo sit voluptate aliquip.</p>
+                <p>Lo más importante para mí, son las opiniones de mis clientes.</p>
             </div>
             <Carousel
                 infiniteLoop={true}
@@ -21,10 +21,10 @@ const Testimonials = ({ clientsOpinion }) => {
                 stopOnHover={true}
             >
                 {
-                    clientsOpinion.map(({ name, testimonial }) => {
+                    clientsOpinion.map(({ name, testimonial, picture }) => {
                         return (
                             <div className={content} key={name.replace(' ', '')}>
-                                <img className={image_s} src='/images/nicole.jpg' alt='example' />
+                                <img className={image_s} src={`/images/testimonials/${picture}`} alt='example' />
                                 <h5 className={name_s}>{name}</h5>
                                 <p>{testimonial}</p>
                             </div>

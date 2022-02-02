@@ -49,7 +49,7 @@ const servicios = ({ data: { clientsOpinion } }) => {
             <div className={`${lymphatic} ${treatment}`}>
                 <h2 className={title}>Drenaje Linfático</h2>
             </div>
-            <p className={description}><b>El Drenaje Linfático</b> se basa en un método de masajes específicos con maniobras precisas, suaves, superficiales y ritmicas. Esté tratamiento se aplica sobre el sistema cirtulatorio y su objetivo es movilizar los liquidos del organismo para favorecer la eliminación de sustancias de desecho que se acumulan en la sangre. Este tratamiento se aplica en edemas localizados y generalizados, celulítis, problemas de cirulación, piernas cansadas, procesos de cicatrización, etc...</p>
+            <p className={description}><b>El Drenaje Linfático</b> se basa en un método de masajes específicos con maniobras precisas, suaves, superficiales y ritmicas. Esté tratamiento se aplica sobre el sistema cirtulatorio, su objetivo es movilizar los liquidos del organismo para favorecer la eliminación de sustancias de desecho que se acumulan en la sangre. Este tratamiento se aplica en edemas localizados y generalizados, celulítis, problemas de cirulación, piernas cansadas, procesos de cicatrización, etc...</p>
 
 
             <div className={`${geriatric} ${treatment}`}>

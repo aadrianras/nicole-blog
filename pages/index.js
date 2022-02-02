@@ -74,7 +74,7 @@ const index = ({ data: { clientsOpinion } }) => {
             alt='Rehabilitación del paciente'
             number='3.'
             title='Rehabilitación del paciente'
-            desc='Realizo las sesiones planificadas y en cada una de ellas hago una evaluación de progreso para reestructurar el tratamiento si es necesario.'
+            desc='Realizo las sesiones planificadas, en cada una de ellas hago una evaluación de progreso para reestructurar el tratamiento si es necesario.'
           />
         </div>
       </div>
@@ -117,17 +117,31 @@ export const getStaticProps = async (ctx) => {
 
   const clientsOpinion = [
     {
-      name: 'Adrian Aguilar',
+      name: 'Roberto Aguilar G.',
+      picture: 'roberto.jpg',
       testimonial: 'Cillum occaecat incididunt cupidatat fugiat occaecat proident culpa excepteur ut sunt sunt irure ut. Aliquip minim aute enim ex. Sunt cillum ipsum minim est dolor. Nisi proident qui laboris exercitation laboris do dolore aliquip. Occaecat fugiat aliqua anim culpa ea et duis reprehenderit.',
     },
     {
-      name: 'Gemma Sandic',
-      testimonial: 'Ad mollit dolore nostrud culpa. Quis consectetur incididunt consequat irure magna eu laborum ullamco aliquip quis laborum. Qui duis esse nisi proident minim voluptate laboris fugiat duis nostrud ut cupidatat mollit. Excepteur sint tempor dolore velit sint consequat id irure.',
+      name: 'Gabriela Carranza S.',
+      picture: 'gaby.jpg',
+      testimonial: 'Llevo un tiempo realizando la terapia y siento que me ha ayudado mucho para poder realizar mis actividades diarias y ser mas independiente, ahora siento mucha más seguridad al caminar.',
     },
     {
-      name: 'Oscar Fernandez',
-      testimonial: 'Nostrud minim in consectetur ex cillum cupidatat adipisicing id aliquip voluptate consectetur Lorem.',
+      name: 'Eduardo Blanco',
+      picture: 'eduardo.jpg',
+      testimonial: 'Antes de los tratamientos y los ejercicios no soportaba el dolor. Ahora puedo decir que siento paz nuevamente. Gracias doctorita!',
+    },
+    {
+      name: 'Gabriela Azurduy A.',
+      picture: 'gabriela.jpg',
+      testimonial: 'Gracias a Nicole ahora me veo mejor y me siento mucho mejor con relación a mi postura y dolor lumbar.',
+    },
+    {
+      name: 'Daro Venegas V.',
+      picture: 'daro.jpg',
+      testimonial: 'El dolor de espalda que tenia era insoportable, no me permitia realizar mis actividades cotidianas. La licenciada no solo alivio mi dolor de espalda sino que mejoro mi postura y ahora me veo mucho mejor.',
     }
+
   ]
 
   return {

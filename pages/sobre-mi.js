@@ -23,7 +23,7 @@ const sobreMi = () => {
             <div className={`${grid} ${mg_bottom}`}>
                 <div className={history}>
                     <h2>Mi historia</h2>
-                    <p>Nací y vivo en La Paz, Bolivia. Estudie Fisioterapia y Kinesiología en la Universidad Central y estoy cursando la carrera de Medicina en la Universidad Nuestra Señora de La Paz. He trabajado en el Centro Integral Mary Andrea y en el Centro de Rehabilitación Vida Nueva. Sin embargo, donde encontre satisfacción es ejerciendo mi carrera independientemente.</p>
+                    <p>Nací y vivo en La Paz, Bolivia. Estudie Fisioterapia y Kinesiología en la Universidad Central y estoy cursando la carrera de Medicina en la Universidad Nuestra Señora de La Paz. He trabajado en el Centro Integral Mary Andrea y en el Centro de Rehabilitación Vida Nueva. Actualmente, trabajo en mi consultorio y a domicilio, lo cual me permite brindar una atención personalizada de acuerdo a la necesidad de cada paciente.</p>
                 </div>
                 <div className={hands}></div>
             </div>
@@ -53,7 +53,7 @@ const sobreMi = () => {
             <div className={`${grid} ${mg_bottom}`}>
                 <div className={objective}>
                     <h2>Mi objetivo</h2>
-                    <p>A traves de la constante capacitación y crecimiento, combinando la Fisioterapia y la Medicina pretendo abrir un Centro Integral de Rehabilitación Multidisciplinario, el cual.</p>
+                    <p>Mi objetivo principal es el crecimiento profesional, mediante constantes capacitaciones y especializaciones, tanto en Fisioterapia como en Medicína.</p>
                 </div>
                 <img className={`${mg_center} ${stethoscope}`} src='/images/med.png' alt='Stethoscope' />
             </div>
