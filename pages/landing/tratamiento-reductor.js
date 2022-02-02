@@ -2,7 +2,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-import { container, hero, big_text, icon, hero_content, line, paragraph, subtitle, treatments, treatment, treatment_img, treatment_content, team_c, team_title, team, card, card_content, small } from './tratamiento-reductor.module.css';
+import {
+    container, hero, big_text, icon, hero_content, line, paragraph, subtitle, treatments, treatment, treatment_img, treatment_content, team_c, team_title, team, card, card_content, small, prices_container, prices_content, prices_regular, discount_c, discount_title, discount_prices, prices_regular_title, discount_bg, contact_c, contact_content, contact_info, map_c
+} from './tratamiento-reductor.module.css';
 
 
 
@@ -81,48 +83,35 @@ const reductorTreatment = () => {
                             <div className={card_content}>
                                 <h3>Lic. Nicole Azurduy</h3>
                                 <p className={small}>Fisioterapeuta y Kinesiologa</p>
-                                <p className={small}>Nostrud incididunt in pariatur aute amet culpa qui nulla.</p>
+                                <p className={small}>&quot; Que la belleza sea consecuencia de tu buena salud.&quot;</p>
                             </div>
                         </div>
                         <div className={card}>
                             <div className={card_content}>
-                                <h3>Lic. Nicole Azurduy</h3>
-                                <p className={small}>Fisioterapeuta y Kinesiologa</p>
-                                <p className={small}>Nostrud incididunt in pariatur aute amet culpa qui nulla.</p>
+                                <h3>Lic. Mauricio Alave</h3>
+                                <p className={small}>Fisioterapeuta y Kinesiologo</p>
+                                <p className={small}>&quot;La única persona a la que puedes cambiar eres tu mismo.&quot;</p>
                             </div>
                             <img src='/images/mauricio.jpg' alt='Nicole Azurduy' />
                         </div>
                     </div>
                 </div>
 
-                <div>
+                <div className={prices_container}>
                     <h2>Precios</h2>
-                    <div>
-                        <div>
+                    <div className={prices_content}>
+                        <div className={prices_regular}>
                             <div>
-                                <h4>Sesión</h4>
+                                <h4 className={prices_regular_title}>Sesión</h4>
                                 <p>Precio regular</p>
                             </div>
                             <p>Bs. 150</p>
                             <p>Tratamiento de masajes reductores y electroestimulación</p>
                         </div>
-                        <div>
-                            <h4>Promociones</h4>
+
+                        <div className={prices_regular}>
                             <div>
-                                <p>1 x Bs.1000</p>
-                                <p>2 x Bs.1500</p>
-                            </div>
-                            <ul>
-                                <li>Por persona:</li>
-                                <li>8 sesiones de masajes reductores.</li>
-                                <li>4 sesiones de mesoterapa fitness con Lipostabil.</li>
-                                <li>8 sesiones de electroestimulación.</li>
-                                <li>2 sesiones de maderoterapia.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div>
-                                <h4>Tratamiento completo</h4>
+                                <h4 className={prices_regular_title}>Tratamiento completo</h4>
                                 <p>Precio regular</p>
                             </div>
                             <p>Bs. 1700</p>
@@ -134,22 +123,41 @@ const reductorTreatment = () => {
                                 <li>2 sesiones de maderoterapia.</li>
                             </ul>
                         </div>
+
+                        <div className={discount_bg}>
+                            <div className={discount_c}>
+                                <h4 className={discount_title}>Promoción</h4>
+                                <div className={discount_prices}>
+                                    <p>1 x Bs.1000</p>
+                                    <p>2 x Bs.1500</p>
+                                </div>
+                                <ul>
+                                    <li>Por persona:</li>
+                                    <li>8 sesiones de masajes reductores.</li>
+                                    <li>4 sesiones de mesoterapa fitness con Lipostabil.</li>
+                                    <li>8 sesiones de electroestimulación.</li>
+                                    <li>2 sesiones de maderoterapia.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div>
+                <div className={contact_c}>
                     <h2>Contacto</h2>
-                    <div>
-
-                        {/* Map here */}
-                        <div>
+                    <div className={contact_content}>
+                        <div className={contact_info}>
                             <p><b>Dirección:</b></p>
                             <p>Oficina 3 - Piso 8</p>
                             <p>San Miguel</p>
                             <p>Edificio Centro Comercial Monroy y Velez # 8350</p>
-                            <p><b>Contact:</b></p>
+                            <br />
+                            <p><b>Contacto:</b></p>
                             <p>76536268</p>
                             <p>78916557</p>
+                        </div>
+                        <div className={map_c}>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.7129280853162!2d-68.07746273475776!3d-16.54248475567715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21131fdcbe63%3A0x7efd00803d883f20!2sEdif.%20Monroy%20y%20velez!5e0!3m2!1sen!2sbo!4v1643825458108!5m2!1sen!2sbo" width="400" height="300" style={{ border: 0 }} allowFullScreen={false} loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>

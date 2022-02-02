@@ -36,6 +36,7 @@
 .paragraph {
     padding: 0 .5rem;
     margin-bottom: var(--mg);
+    max-width: 50rem;
 }
 
 .subtitle {
@@ -46,7 +47,7 @@
 
 .treatments {
     max-width: 75rem;
-    margin: 0 auto;
+    margin: 0 auto var(--mg) auto;
 }
 
 .treatments > h2 {
@@ -80,6 +81,7 @@
 }
 
 .team_title {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -93,13 +95,13 @@
 
 .card {
     color: #fff;
-    background: linear-gradient(135deg, rgba(0,0,0, 0.1), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(135deg, rgba(0,0,0, 0.2), rgba(255, 255, 255, 0.2));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     margin-bottom: 1rem;
-    padding: 0 1rem;
+    padding: 0 .5rem;
 
     display: flex;
     gap: .5rem;
@@ -123,5 +125,161 @@
 }
 
 .small {
-    font-size: .8rem;
+    font-size: .9rem;
 }
+
+.small:first-of-type {
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+
+.prices_container{
+    margin: 0 auto var(--mg) auto;
+    max-width: 60rem;
+} 
+
+.prices_container > h2 {
+    font-size: 2.5rem;
+    padding: 0 .5rem;
+}
+
+.prices_content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: var(--mg) 1rem;
+} 
+
+.prices_regular{
+    flex: 1 1 25%;
+    border: 3px solid var(--cl1);
+    padding: 1.5rem .5rem;
+    text-align: center;
+
+    display: flex;
+    flex-flow:column;
+    gap: 1.5rem 1rem;
+}
+
+.prices_regular_title {
+    margin-bottom: -.1rem;
+}
+
+.discount_c {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(0,0,0, 0.2), rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 2rem .5rem;
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+
+.discount_bg {
+    padding: 2rem 0;
+    background-image: url('/images/red.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+
+.discount_title {
+    color: var(--cl4);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+}
+
+.discount_prices > p {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.discount_c > ul > li:first-child {
+    font-weight: bold;
+}
+
+.contact_c > h2 {
+    font-size: 2.5rem;
+    padding: 0 .5rem;
+}
+
+.contact_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 2rem 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_info {
+    padding: 0 .5rem;
+}
+
+.map_c {
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 440px){
+        .treatment_img {
+            margin: 0 auto;
+        }
+}
+
+@media screen and (min-width: 767px){
+    .paragraph {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .treatments > h2 {
+        text-align: center;
+    }
+
+    .treatment:nth-of-type(even) > .treatment_content{
+        margin-left: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .team {
+        padding: 0 1rem;
+    }
+
+    .team_title {
+        text-align: center;
+    }
+
+    .card {
+        padding: 0 1rem;
+    }
+
+    .prices_container {
+        padding: 0 1rem;
+    }
+    .prices_container > h2 {
+        text-align: center;
+    }
+
+    .contact_c > h2 {
+        text-align: center;
+    }
+
+    .contact_info{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .map_c {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
