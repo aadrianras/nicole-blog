@@ -1,7 +1,17 @@
 .container {
     background-color: var(--cl2);
     padding: 2rem 1rem;
+    position: relative;
     margin-top: var(--mg);
+}
+
+.container::before {
+    content: "";
+    background-image: url('/images/doddle.png');
+    background-size: 15rem 15rem;
+    inset: 0;
+    position: absolute;
+    opacity: 0.1;
 }
 
 .logo, .facebook, .legal, .holos, .holos > a  {
@@ -14,6 +24,7 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .logo {
@@ -28,6 +39,7 @@
     flex-flow: column;
     gap: 1rem;
     align-items: center;
+      z-index: 5;
 }
 
 .legal {
@@ -36,6 +48,7 @@
 
 .holos {
     text-align: center;
+    z-index: 5;
 }
 
 .holos > a {
