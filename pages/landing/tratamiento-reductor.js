@@ -30,9 +30,7 @@ const ReductorTreatment = () => {
                     property="og:description"
                     content="Ofrecemos un tratamiento completo para reducir esa acumulación de grasa que tanto te cuesta eliminar y asi llegar a la figura que tanto deseas. Con este tratamiento es posible reducir entre 5 a 10 centímetros en el área abdominal en 1 mes."
                 />
-                <meta property="og:image" content='res.cloudinary.com/holos73/image/upload/v1643907459/forLandings/reduccion_fb_dnfgu0.jpg' />
-                <meta property="og:image:secure_url" content='https://res.cloudinary.com/holos73/image/upload/v1643907459/forLandings/reduccion_fb_dnfgu0.jpg' />
-                <meta property="og:image:type" content="image/jpeg" />
+                <meta property="og:image" content='https://res.cloudinary.com/holos73/image/upload/v1643907459/forLandings/reduccion_fb_dnfgu0.jpg' />
                 <meta property="og:image:width" content="1080" />
                 <meta property="og:image:height" content="1080" />
             </Head>
