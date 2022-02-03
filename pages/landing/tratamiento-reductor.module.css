@@ -222,6 +222,7 @@
 
 .map_c {
     margin: 0 auto;
+    width: min(100%, 425px);
 }
 
 .button {
