@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -11,8 +12,11 @@ import {
 
 
 const ReductorTreatment = () => {
-    const router = useRouter()
-    const shareUrl = `${process.env.NEXT_PUBLIC_URL}${router.pathname}`;
+    const [baseUrl, setBaseUrl] = useState('');
+    useEffect(() => typeof window !== 'undefined' ? setBaseUrl(window.location.host) : null, []);
+    const router = useRouter();
+    const shareUrl = `${baseUrl}${router.pathname}`;
+    console.log(shareUrl);
 
     return (
         <div className={container}>
