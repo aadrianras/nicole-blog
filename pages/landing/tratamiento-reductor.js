@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -16,10 +17,22 @@ const ReductorTreatment = () => {
     useEffect(() => typeof window !== 'undefined' ? setBaseUrl(window.location.host) : null, []);
     const router = useRouter();
     const shareUrl = `${baseUrl}${router.pathname}`;
-    console.log(shareUrl);
 
     return (
         <div className={container}>
+            <Head>
+                <title>Promoción para reducir la grasa acumulada - Nicole Azurduy</title>
+                <meta property="og:url" content="nicoleazurduy.com" />
+                <meta property="og:type" content="website" />
+                {/* <meta property="fb:app_id" content="your fb id" /> */}
+                <meta property="og:title" content='Aprovecha nuestra promoción para reducir grasa acumulada.' />
+                <meta
+                    property="og:description"
+                    content="Ofrecemos un tratamiento completo para reducir esa acumulación de grasa que tanto te cuesta eliminar y asi llegar a la figura que tanto deseas. Con este tratamiento es posible reducir entre 5 a 10 centímetros en el área abdominal en 1 mes."
+                />
+                <meta property="og:image" content='/images/landing/reduccion_fb.jpg' />
+            </Head>
+
             <div className={hero}>
                 <h1 className={big_text}>Alcanzar tus metas es posible</h1>
                 <div className={hero_content}>
