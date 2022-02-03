@@ -24,6 +24,7 @@ const ReductorTreatment = () => {
                 <title>Promoción para reducir la grasa acumulada - Nicole Azurduy</title>
                 <meta property="og:url" content="nicoleazurduy.com" />
                 <meta property="og:type" content="website" />
+                <meta property="fb:app_id" content="465134355201418" />
                 {/* <meta property="fb:app_id" content="your fb id" /> */}
                 <meta property="og:title" content='Aprovecha nuestra promoción para reducir grasa acumulada.' />
                 <meta
@@ -31,6 +32,7 @@ const ReductorTreatment = () => {
                     content="Ofrecemos un tratamiento completo para reducir esa acumulación de grasa que tanto te cuesta eliminar y asi llegar a la figura que tanto deseas. Con este tratamiento es posible reducir entre 5 a 10 centímetros en el área abdominal en 1 mes."
                 />
                 <meta property="og:image" content='https://res.cloudinary.com/holos73/image/upload/v1643907459/forLandings/reduccion_fb_dnfgu0.jpg' />
+                <meta property="og:image:alt" content='Despídete de los rollitos' />
                 <meta property="og:image:width" content="1080" />
                 <meta property="og:image:height" content="1080" />
             </Head>
@@ -72,7 +74,7 @@ const ReductorTreatment = () => {
                     </div>
                     <div className={treatment_content}>
                         <h2>Masajes Reductores</h2>
-                        <p>Eliminan la acumulación de grasa localizada y estiliza el contorno de tu figura, es decir, forma una figura más estética. Esta tratamiento se basa en la aplicación de presión que genera calor sobre los tejidos ayudando a disolver la grasa corporal que se desea eliminar durante la sesión. Los resultados son visible entre la tercera a quinta sesión.</p>
+                        <p>Eliminan la acumulación de grasa localizada y estiliza el contorno de tu figura, es decir, forma una figura más estética. Esta tratamiento se basa en la aplicación de cremas termicas y criogénicas, además de masajes con presión que generan calor sobre los tejidos ayudando a disolver la grasa corporal que se desea eliminar durante la sesión. Los resultados son visible entre la tercera a quinta sesión.</p>
                         <p>Cada tratamiento dura entre 40 a 45 minutos.</p>
                     </div>
                 </div>
