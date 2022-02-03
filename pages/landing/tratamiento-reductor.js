@@ -1,22 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FacebookShareButton, WhatsappShareButton, } from "react-share";
 
 import {
-    container, hero, big_text, icon, hero_content, line, paragraph, subtitle, treatments, treatment, treatment_img, treatment_content, team_c, team_title, team, card, card_content, small, prices_container, prices_content, prices_regular, discount_c, discount_title, discount_prices, prices_regular_title, discount_bg, contact_c, contact_content, contact_info, map_c
+    container, hero, big_text, icon, hero_content, line, paragraph, subtitle, treatments, treatment, treatment_img, treatment_content, team_c, team_title, team, card, card_content, small, prices_container, prices_content, prices_regular, discount_c, discount_title, discount_prices, prices_regular_title, discount_bg, contact_c, contact_content, contact_info, map_c, button
 } from './tratamiento-reductor.module.css';
 
 
 
-const reductorTreatment = () => {
+const ReductorTreatment = () => {
+    const router = useRouter()
+    const shareUrl = `${process.env.NEXT_PUBLIC_URL}${router.pathname}`;
+
     return (
         <div className={container}>
             <div className={hero}>
                 <h1 className={big_text}>Alcanzar tus metas es posible</h1>
                 <div className={hero_content}>
                     <p>Comparte en</p>
-                    <FontAwesomeIcon className={icon} icon={faWhatsapp} />
-                    <FontAwesomeIcon className={icon} icon={faFacebookSquare} />
+                    <WhatsappShareButton url={shareUrl}>
+                        <FontAwesomeIcon className={icon} icon={faWhatsapp} />
+                    </WhatsappShareButton>
+                    <FacebookShareButton url={shareUrl} >
+                        <FontAwesomeIcon className={icon} icon={faFacebookSquare} />
+                    </FacebookShareButton>
                     <div className={line}></div>
                 </div>
             </div>
@@ -153,8 +162,26 @@ const reductorTreatment = () => {
                             <p>Edificio Centro Comercial Monroy y Velez # 8350</p>
                             <br />
                             <p><b>Contacto:</b></p>
-                            <p>76536268</p>
-                            <p>78916557</p>
+
+                            <a
+                                className={button}
+                                href="https://wa.me/+59178916557"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faWhatsapp} />
+                                <span>78916557</span>
+                            </a>
+
+                            <a
+                                className={button}
+                                href="https://wa.me/+59176536268"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faWhatsapp} />
+                                <span>76536268</span>
+                            </a>
                         </div>
                         <div className={map_c}>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.7129280853162!2d-68.07746273475776!3d-16.54248475567715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21131fdcbe63%3A0x7efd00803d883f20!2sEdif.%20Monroy%20y%20velez!5e0!3m2!1sen!2sbo!4v1643825458108!5m2!1sen!2sbo" width="400" height="300" style={{ border: 0 }} allowFullScreen={false} loading="lazy"></iframe>
@@ -166,4 +193,4 @@ const reductorTreatment = () => {
     );
 }
 
-export default reductorTreatment;
+export default ReductorTreatment;

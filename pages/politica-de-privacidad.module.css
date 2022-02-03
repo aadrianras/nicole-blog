@@ -1,0 +1,13 @@
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 7rem .5rem;
+}
+
+.container h1, .container h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.container h2, .container h3 {
+    margin-top: 2rem;
+}

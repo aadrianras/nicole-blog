@@ -79,19 +79,24 @@ const NavBar = () => {
                     </div>
                 )
             }
-            <nav className={container}>
-                <Link href='/'>
-                    <a className={logo}>
-                        <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
-                    </a>
-                </Link>
-                <p
-                    className={menu_button}
-                    onClick={() => setDisplayMenu(true)}
-                >
-                    Menu
-                </p>
-            </nav>
+
+            {
+                !pathname.includes('landing')
+                &&
+                (<nav className={container}>
+                    <Link href='/'>
+                        <a className={logo}>
+                            <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
+                        </a>
+                    </Link>
+                    <p
+                        className={menu_button}
+                        onClick={() => setDisplayMenu(true)}
+                    >
+                        Menu
+                    </p>
+                </nav>)
+            }
         </>
     );
 }

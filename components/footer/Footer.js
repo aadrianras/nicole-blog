@@ -19,11 +19,8 @@ const Footer = () => {
                 </a>
             </div>
             <div className={legal_c}>
-                <Link href='/'>
+                <Link href='/politica-de-privacidad'>
                     <a className={legal} >POLÍTICA DE PRIVACIDAD</a>
-                </Link>
-                <Link href='/'>
-                    <a className={legal} >TERMINOS Y CONDICIONES</a>
                 </Link>
             </div>
             <p className={holos}>Desarrollado por <a href="https://holos73.media" target="_blank" rel="noreferrer">Holos 73</a></p>

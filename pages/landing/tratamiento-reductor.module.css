@@ -224,6 +224,19 @@
     margin: 0 auto;
 }
 
+.button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    color: var(--cl1);
+    transition: all .3s ease;
+}
+
+.button:hover {
+    font-weight: bold;
+}
+
 
 @media screen and (min-width: 440px){
         .treatment_img {
