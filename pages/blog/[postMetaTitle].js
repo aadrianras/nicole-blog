@@ -19,7 +19,7 @@ const Post = ({ post }) => {
     const [baseUrl, setBaseUrl] = useState('');
     useEffect(() => typeof window !== 'undefined' ? setBaseUrl(window.location.host) : null, []);
     const router = useRouter();
-    const shareUrl = `${baseUrl}${router.pathname}`;
+    const shareUrl = `${baseUrl}${router.asPath}`;
     //There are the keywords for SEO
     const tags = [...post.metaTitle.split('-'), 'fisioterapia', 'fisioterapeuta', 'kinesiologa', 'kinesiologia'];
 
