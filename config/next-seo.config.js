@@ -1,4 +1,4 @@
-export default {
+const config = {
     openGraph: {
         type: 'website',
         locale: 'es_BO',
@@ -23,7 +23,7 @@ export default {
     title: 'Fisioterapeuta Nicole Azurduy',
     description: 'Página oficial de la profesional en fisioterapia y kinesiología Nicole Azurduy. Ubicada en la ciudad de La Paz, Bolivia.',
     author: 'Adrian Roberto Aguilar Sandic',
-    image: '',
+    image: 'https://www.nicoleazurduy.com/images/website-card.jpg',
     facebookUrl: 'https://www.facebook.com/fisioterapia.nicole.azurduy',
     facebook: {
         appId: '465134355201418'
@@ -43,3 +43,5 @@ export default {
         }
     },
 };
+
+export default config;

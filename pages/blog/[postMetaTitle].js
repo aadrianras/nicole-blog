@@ -27,6 +27,10 @@ const Post = ({ post }) => {
         <div className={container}>
             {/* BEST FOR FACEBOOK */}
             <NextSeo
+                title={post.title}
+                description={post.summary}
+                canonical={`https://www.nicoleazurduy.com/blog/${post.metaTitle}`}
+                image={post.coverImage}
                 openGraph={{
                     title: `${post.title}`,
                     description: `${post.summary}`,
