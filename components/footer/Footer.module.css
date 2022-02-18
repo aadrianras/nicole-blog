@@ -84,6 +84,11 @@
 	font-weight: bold;
 }
 
+.icon {
+	font-size: 2rem;
+	max-width: 2rem;
+}
+
 @media screen and (min-width: 768px) {
 	.container {
 		display: flex;

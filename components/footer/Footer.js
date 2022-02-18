@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 
-import { container, logo_c, logo, legal_c, legal, holos, facebook, holos_link } from './Footer.module.css';
+import { container, logo_c, logo, legal_c, legal, holos, facebook, holos_link, icon } from './Footer.module.css';
 
 const Footer = () => {
     return (
@@ -20,7 +20,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon icon={faFacebookSquare} />
+                    <FontAwesomeIcon icon={faFacebookSquare} className={icon} />
                     <span>Facebook</span>
                 </a>
             </div>

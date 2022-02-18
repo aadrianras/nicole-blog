@@ -70,7 +70,7 @@ const sobreMi = () => {
                     <h2>Mi objetivo</h2>
                     <p>Mi objetivo principal es el crecimiento profesional, mediante constantes capacitaciones, especializaciones y experiencias, tanto en Fisioterapia como en Medicína. Todo con la finalidad de poder aplicar estos conocimientos y técnicas en beneficio de los pacientes.</p>
                 </div>
-                {/* <img className={`${mg_center} ${stethoscope}`} src='/images/med.png' alt='Stethoscope' /> */}
+
                 <Lottie
                     animationData={doctorLottie}
                     className={lottie}

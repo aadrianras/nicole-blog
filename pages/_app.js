@@ -3,6 +3,7 @@ import { DefaultSeo } from 'next-seo';
 import SEO from '../config/next-seo.config';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
 import '../styles/globals.css';
 import 'animate.css';
 

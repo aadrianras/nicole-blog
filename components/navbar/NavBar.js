@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import { container, logo, logo_menu, menu, menu_items, menu_button, close_button_c, close_button, icon, last_link, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
+import { container, logo, logo_menu, menu, menu_items, menu_button, close_button_c, close_button, close_icon, icon, last_link, link, selected, facebook, follow_c, follow } from './NavBar.module.css';
 import Image from 'next/image';
 
 const NavBar = () => {
@@ -33,7 +33,7 @@ const NavBar = () => {
                     <div className={`${menu} animate__animated animate__fadeInRightBig`}>
                         <div className={close_button_c}>
                             <button className={close_button} onClick={() => setDisplayMenu(false)}>
-                                <FontAwesomeIcon icon={faTimes} className={icon} />
+                                <FontAwesomeIcon icon={faTimes} className={close_icon} />
                             </button>
                         </div>
                         <div className={menu_items}>
@@ -72,7 +72,8 @@ const NavBar = () => {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    <FontAwesomeIcon icon={faFacebookSquare} />
+                                    <FontAwesomeIcon icon={faFacebookSquare} className={icon} />
+                                    Facebook
                                 </a>
                             </div>
                         </div>

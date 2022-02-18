@@ -1,157 +1,151 @@
 .hero {
-    max-width: 1200px;
-    padding-top: 6rem;
-    margin: 0 auto var(--mg) auto;
+	max-width: 1200px;
+	padding-top: 6rem;
+	margin: 0 auto var(--mg) auto;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    grid-auto-flow: dense;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+	grid-auto-flow: dense;
 }
 
 .hero_text {
-    padding: 0 .5rem;
+	padding: 0 0.5rem;
 }
 
-.hero_text h1{
-    font-size: 3rem;
+.hero_text h1 {
+	font-size: 3rem;
 }
 
 .common {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.common h6 {
-    font-size: 3rem;
-    padding: 0 .5rem;
-    max-width: 300px;
-    margin-bottom: var(--mg);
+.common h2 {
+	font-size: 3rem;
+	padding: 0 0.5rem;
+	max-width: 300px;
+	margin-bottom: var(--mg);
 }
 
-.title{
-    color: var(--cl4);
-    font-size: clamp(2.3rem, 7vw, 5rem);
-    text-align: center;
-    max-width: 900px;
+.title {
+	color: var(--cl4);
+	font-size: clamp(2.3rem, 7vw, 5rem);
+	text-align: center;
+	max-width: 900px;
 }
 
 .treatment {
-    position: relative;
-    height: 480px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	height: 480px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .treatment:nth-of-type(odd)::after {
-    content: "";
-    background: rgba(17,17,17,.3);
-    position: absolute;
-    height: 400px;
-    overflow: hidden;
-    width: min(100%, 1000px);
-    transform: skewY(-6deg);
-    z-index: -1;
+	content: '';
+	background: rgba(17, 17, 17, 0.3);
+	position: absolute;
+	height: 400px;
+	overflow: hidden;
+	width: min(100%, 1000px);
+	transform: skewY(-6deg);
+	z-index: -1;
 }
 
 .treatment:nth-of-type(odd)::before {
-    content: "";
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size: cover;
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(-6deg);
-    z-index: -1;
-} 
+	content: '';
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	height: 400px;
+	width: min(100%, 1000px);
+	transform: skewY(-6deg);
+	z-index: -1;
+}
 
 .treatment:nth-of-type(even)::after {
-    content: "";
-    background: rgba(17,17,17,.3);
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(6deg);
-    z-index: -1;
+	content: '';
+	background: rgba(17, 17, 17, 0.3);
+	position: absolute;
+	height: 400px;
+	width: min(100%, 1000px);
+	transform: skewY(6deg);
+	z-index: -1;
 }
 
 .treatment:nth-of-type(even)::before {
-    content: "";
-    background-repeat: no-repeat;
-    background-position:center center;
-    background-size: cover;
-    position: absolute;
-    height: 400px;
-    width: min(100%, 1000px);
-    transform: skewY(6deg);
-    z-index: -1;
-} 
+	content: '';
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	height: 400px;
+	width: min(100%, 1000px);
+	transform: skewY(6deg);
+	z-index: -1;
+}
 
 .masotherapy::before {
-    background-image: url(/images/terapia-manual.jpg);
-
-
-} 
-
+	background-image: url(/images/terapia-manual.jpg);
+}
 
 .kinesitherapy::before {
-    background-image: url(/images/cinesiterapia.jpg);
-} 
-
-
+	background-image: url(/images/cinesiterapia.jpg);
+}
 
 .electrotherapy::before {
-    content: "";    background-image: url(/images/electroterapia.jpg);
-} 
-
+	content: '';
+	background-image: url(/images/electroterapia.jpg);
+}
 
 .respiratory::before {
-    background-image: url(/images/terapia-respiratoria.jpg);
-} 
-
+	background-image: url(/images/terapia-respiratoria.jpg);
+}
 
 .lymphatic::before {
-    background-image: url(/images/drenaje-linfatico.jpg);
+	background-image: url(/images/drenaje-linfatico.jpg);
 }
 
 .geriatric::before {
-    background-image: url(/images/terapia-geriatrica.jpg);
+	background-image: url(/images/terapia-geriatrica.jpg);
 }
 
 .neurological::before {
-    background-image: url(/images/terapia-neurologica.jpg);
+	background-image: url(/images/terapia-neurologica.jpg);
 }
 
-
-
 .description {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1rem .5rem;
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 1rem 0.5rem;
 }
 
 .description:last-of-type {
-    margin-bottom: var(--mg);
+	margin-bottom: var(--mg);
 }
 
-
 @media screen and (min-width: 600px) {
-    .masotherapy, .kinesitherapy, .electrotherapy, .respiratory {
-        height: 550px;
-    }
+	.masotherapy,
+	.kinesitherapy,
+	.electrotherapy,
+	.respiratory {
+		height: 550px;
+	}
 }
 
 @media screen and (min-width: 720px) {
-    .hero {
-        grid-template-columns: 1fr 350px;
-    }
-    
-    .hero_text {
-        grid-column: 2/3;
-    }
+	.hero {
+		grid-template-columns: 1fr 350px;
+	}
+
+	.hero_text {
+		grid-column: 2/3;
+	}
 }
