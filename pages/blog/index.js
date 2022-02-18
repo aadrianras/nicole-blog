@@ -5,13 +5,13 @@ import BlogPostCard from '../../components/cards/BlogPostCard';
 
 import { container, hero_c, summary, subtitle, content, categories_s, category_s, selected } from './index.module.css';
 
-const index = ({ posts, categories }) => {
+const Index = ({ posts, categories }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [filteredPosts, setFilteredPosts] = useState(posts.filter(post => post.published));
 
 
     useEffect(() => setFilteredPosts(posts.filter(post => post.published).filter(post => !selectedCategory ? true : post.categories.some(category => category.name === selectedCategory))
-    ), [selectedCategory]);
+    ), [selectedCategory, posts]);
 
 
     return (
@@ -90,4 +90,4 @@ export const getStaticProps = async (ctx) => {
     }
 }
 
-export default index;
+export default Index;
