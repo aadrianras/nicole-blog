@@ -44,6 +44,7 @@ p, ul, li{
   font-weight: 300;
 }
 
+
 ul {
   list-style: none;
 }
@@ -68,12 +69,12 @@ svg {
 }
 
 
-/* These is the style when a text is selected 
-::selection {
+/* These is the style when a text is selected  */
+/* ::selection {
   color: #000;
   background: #fbd404;
-}
-*/
+} */
+
 
 img,
 video,
@@ -115,9 +116,9 @@ label[for] {cursor: pointer;}
 }
 */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 645px) {
   ::-webkit-scrollbar {
     width: 8px;
-    height: 8px;
+    height: 0px;
   } 
 }

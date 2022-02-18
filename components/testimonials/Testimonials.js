@@ -1,9 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { container, title, content, image_s, name_s } from './Testimonials.module.css';
 
 const Testimonials = ({ clientsOpinion }) => {
@@ -25,7 +21,7 @@ const Testimonials = ({ clientsOpinion }) => {
                         return (
                             <div className={content} key={name.replace(' ', '')}>
                                 <img className={image_s} src={`/images/testimonials/${picture}`} alt='example' />
-                                <h5 className={name_s}>{name}</h5>
+                                <h4 className={name_s}>{name}</h4>
                                 <p>{testimonial}</p>
                             </div>
                         )

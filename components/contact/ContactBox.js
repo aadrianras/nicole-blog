@@ -6,7 +6,7 @@ import { container, text, button } from './ContactBox.module.css';
 const ContactBox = () => {
     return (
         <div className={container}>
-            <h5>Si deseas coordinar una cita o realizarme cualquier tipo de consulta</h5>
+            <h4>Si deseas coordinar una cita o realizarme cualquier tipo de consulta</h4>
             <p className={text}>No dudes en escribirme un mensaje, te respondere con mucho gusto.</p>
             <a
                 className={button}

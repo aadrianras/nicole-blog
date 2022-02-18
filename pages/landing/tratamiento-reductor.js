@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { ArticleJsonLd, NextSeo } from 'next-seo';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -20,22 +21,34 @@ const ReductorTreatment = () => {
 
     return (
         <div className={container}>
-            <Head>
-                <title>Promoción para reducir la grasa acumulada - Nicole Azurduy</title>
-                <meta property="og:url" content="nicoleazurduy.com" />
-                <meta property="og:type" content="website" />
-                <meta property="fb:app_id" content="465134355201418" />
-                {/* <meta property="fb:app_id" content="your fb id" /> */}
-                <meta property="og:title" content='Aprovecha nuestra promoción para reducir grasa acumulada.' />
-                <meta
-                    property="og:description"
-                    content="Ofrecemos un tratamiento completo para reducir esa acumulación de grasa que tanto te cuesta eliminar y asi llegar a la figura que tanto deseas. Con este tratamiento es posible reducir entre 5 a 10 centímetros en el área abdominal en 1 mes."
-                />
-                <meta property="og:image" content='https://res.cloudinary.com/holos73/image/upload/v1643907459/forLandings/reduccion_fb_dnfgu0.jpg' />
-                <meta property="og:image:alt" content='Despídete de los rollitos' />
-                <meta property="og:image:width" content="1080" />
-                <meta property="og:image:height" content="1080" />
-            </Head>
+
+            {/* BEST FOR FACEBOOK */}
+            <NextSeo
+                openGraph={{
+                    title: `Promoción para reducir la grasa acumulada - Nicole Azurduy`,
+                    description: `Ofrecemos un tratamiento completo para reducir esa acumulación de grasa que tanto te cuesta eliminar y asi llegar a la figura que tanto deseas. Con este tratamiento es posible reducir entre 5 a 10 centímetros en el área abdominal en 1 mes.`,
+                    url: `https://www.nicoleazurduy.com/landing/tratamiento-reductor`,
+                    type: 'website',
+                    images: [
+                        {
+                            url: 'https://www.nicoleazurduy.com/images/landing-reduccion-card.jpg',
+                            width: 1080,
+                            height: 1080,
+                            alt: 'Promoción para reducir la grasa acumulada - Nicole Azurduy',
+                        },
+                    ],
+                }}
+            />
+            {/* BEST FOR GOOGLE */}
+            <ArticleJsonLd
+                url='https://www.nicoleazurduy.com/landing/tratamiento-reductor'
+                title='Promoción para reducir la grasa acumulada - Nicole Azurduy'
+                images='https://www.nicoleazurduy.com/images/landing-reduccion-card.jpg'
+                // datePublished="2015-02-05T08:00:00+08:00"
+                // dateModified="2015-02-05T09:00:00+08:00"
+                authorName={['Fisioterapeuta Nicole Azurduy']}
+                description='Ofrecemos un tratamiento completo para reducir esa acumulación de grasa que tanto te cuesta eliminar y asi llegar a la figura que tanto deseas. Con este tratamiento es posible reducir entre 5 a 10 centímetros en el área abdominal en 1 mes.'
+            />
 
             <div className={hero}>
                 <h1 className={big_text}>Alcanzar tus metas es posible</h1>

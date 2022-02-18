@@ -1,20 +1,42 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import ButtonLinkAnimation from '../components/buttons/ButtonLinkAnimation';
-import BlogPostCard from '../components/cards/BlogPostCard';
+import { NextSeo } from 'next-seo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import Step from '../components/cards/Step';
+import ButtonLinkAnimation from '../components/buttons/ButtonLinkAnimation';
+import BlogPostCard from '../components/cards/BlogPostCard';
 import ContactBox from '../components/contact/ContactBox';
 import Testimonials from '../components/testimonials/Testimonials';
 import Services from '../components/services/Services';
-import HomeHero from '../components/Heros/HomeHero';
+import Step from '../components/cards/Step';
 
-import { container, header_s, phrase, whatsapp, greeting, about, nicole_bg, nicole, how, how_info, title, blog_c, blog_info, grid, grid_steps, mg, max_width } from './index.module.css';
+import { container, header_s, phrase, whatsapp, greeting, about, nicole_bg, nicole, how_info, title, blog_info, blog_grid, grid, grid_steps, mg, max_width, map_c, contact_c, contact_content, contact_info } from './index.module.css';
 
-const index = ({ data: { clientsOpinion } }) => {
+const index = ({ data: { clientsOpinion, posts } }) => {
   return (
     <div className={container}>
+
+      {/* SEO */}
+      <NextSeo
+        title="Fisioterapeuta Nicole Azurduy | Inicio"
+        description="Página oficial de la profesional en fisioterapia y kinesiología Nicole Azurduy. Ubicada en la ciudad de La Paz, Bolivia."
+        canonical="https://www.nicoleazurduy.com/"
+        openGraph={{
+          url: 'https://www.nicoleazurduy.com/',
+          title: 'Fisioterapeuta Nicole Azurduy | Inicio',
+          description: 'Página oficial de la profesional en fisioterapia y kinesiología Nicole Azurduy. Ubicada en la ciudad de La Paz, Bolivia.',
+          images: [
+            {
+              url: 'https://www.nicoleazurduy.com/images/website-card.jpg',
+              width: 800,
+              height: 418,
+              alt: 'Fisioterapeuta Nicole Azurduy',
+              type: 'image/jpeg',
+            },
+          ],
+          site_name: 'Fisioterapeuta Nicole Azurduy',
+        }}
+      />
 
 
       <header className={header_s}>
@@ -32,7 +54,7 @@ const index = ({ data: { clientsOpinion } }) => {
       {/* <HomeHero /> This component has an animated background*/}
 
       <div className={greeting}>
-        <h2>¡Hola! Que bueno que estes aquí.</h2>
+        <h2>¡Hola! Qué bueno que estes aquí.</h2>
         <p>Te doy la bienvenida a mi consultorio virtual de Fisioterapia. Si deseas conocer mi información personal y profesional puedes visitar la página "Sobre mí". Por otra parte, si deseas conocer sobre mi trabajo puedes visitar la página "Servicios". Además, en la página "Blog" encontrarás artículos que podrían ayudarte a resolver alguna duda. Finalmente, si no encuentras lo que estas buscando no dudes en contactarme y te ayudare con mucho gusto.</p>
       </div>
 
@@ -43,15 +65,15 @@ const index = ({ data: { clientsOpinion } }) => {
         </div>
         <div className={about}>
           <h3>Mi pasión es ayudar</h3>
-          <p>Para mi cada paciente y su familia son especiales y tienen necesidades unicas. Por lo tanto, los planes de tratamiento son diseñados de manera personalizada, basado en diferentes técnicas profesionales que permiten obtener resultados en el menor plazo posible mientras se genera bienestar y calidad de vida.</p>
-          <ButtonLinkAnimation text={'Conóceme'} toURL={'/sobre-mi'} />
+          <p>Para mi cada paciente y su familia son especiales y tienen necesidades únicas. Por lo tanto, los planes de tratamiento son diseñados de manera personalizada, basado en diferentes técnicas profesionales que permiten obtener resultados en el menor plazo posible mientras se genera bienestar y calidad de vida.</p>
+          <ButtonLinkAnimation text={'Ir a Sobre Mí'} toURL={'/sobre-mi'} />
         </div>
       </div>
 
 
-      <div className={`${how} ${mg} ${max_width}`}>
+      <div className={`${mg} ${max_width}`}>
         <div className={how_info}>
-          <h4>¿Cómo trabajo?</h4>
+          <h3>¿Cómo trabajo?</h3>
           <p>Usualmente sigo estos tres pasos al atender a un paciente.</p>
         </div>
         <div className={`${grid} ${grid_steps}`}>
@@ -60,7 +82,7 @@ const index = ({ data: { clientsOpinion } }) => {
             alt='Evaluación del paciente'
             number='1.'
             title='Evaluación del paciente'
-            desc='Realizo una exploración fisica general para determinar si existen alteraciones y el grado de las mismas.'
+            desc='Realizo una exploración física general para determinar si existen alteraciones y el grado de las mismas.'
           />
           <Step
             image='step2.png'
@@ -82,34 +104,48 @@ const index = ({ data: { clientsOpinion } }) => {
 
       <Services />
 
-      {/* 
-      <div className={`${blog_c} ${mg} ${max_width}`}>
+
+      <div className={`${mg} ${max_width}`}>
         <div className={title}>
           <h3>Blog</h3>
-          <p className={blog_info}>Elit consectetur dolore nostrud duis reprehenderit.</p>
+          <p className={blog_info}>Estos son mis últimos artículos.</p>
         </div>
-        <div className={grid}>
-           We should slice the summary (This line is a commentary)
-          <BlogPostCard
-            title='Secuela del COVID-19 en la respiración y ejercicios para realizar en casa'
-            summary='Irure nulla laborum voluptate proident sit cupidatat fugiat ipsum nulla ullamco mollit et magna. Occaecat aute quis qui ea adipisicing eiusmod consectetur cupidatat consequat. Esse quis pariatur et laborum reprehenderit ad ut ex laboris ad incididunt consectetur aute. Ullamco dolore culpa commodo dolore mollit mollit incididunt sint ut esse do non ex. Incididunt mollit officia tempor ad enim ea esse. Exercitation sunt aliquip incididunt ea deserunt minim non velit dolor sunt do.'
-          />
-          <BlogPostCard
-            title='Secuela del COVID-19 en la respiración y ejercicios para realizar en casa'
-            summary='Irure nulla laborum voluptate proident sit cupidatat fugiat ipsum nulla ullamco mollit et magna. Occaecat aute quis qui ea adipisicing eiusmod consectetur cupidatat consequat. Esse quis pariatur et laborum reprehenderit ad ut ex laboris ad incididunt consectetur aute. Ullamco dolore culpa commodo dolore mollit mollit incididunt sint ut esse do non ex. Incididunt mollit officia tempor ad enim ea esse. Exercitation sunt aliquip incididunt ea deserunt minim non velit dolor sunt do.'
-          />
-          <BlogPostCard
-            title='Secuela del COVID-19 en la respiración y ejercicios para realizar en casa'
-            summary='Irure nulla laborum voluptate proident sit cupidatat fugiat ipsum nulla ullamco mollit et magna. Occaecat aute quis qui ea adipisicing eiusmod consectetur cupidatat consequat. Esse quis pariatur et laborum reprehenderit ad ut ex laboris ad incididunt consectetur aute. Ullamco dolore culpa commodo dolore mollit mollit incididunt sint ut esse do non ex. Incididunt mollit officia tempor ad enim ea esse. Exercitation sunt aliquip incididunt ea deserunt minim non velit dolor sunt do.'
-          />
-        </div>
-      </div> 
-    */}
+        {
+          posts.length > 0
+            ?
+            <div className={blog_grid}>
+              {posts.map(post => <BlogPostCard post={post} key={post.id} />)}
+            </div>
+            :
+            <p>Oops... No encontramos los artículos, intentalos mas tarde por favor.</p>
+        }
+      </div>
 
 
       <Testimonials clientsOpinion={clientsOpinion} />
-      <ContactBox />
-    </div>
+
+      <div className={contact_c}>
+        <h3>Consultorio</h3>
+        <div className={contact_content}>
+          <div className={contact_info}>
+            <p><b>Dirección:</b></p>
+            <p>Oficina 3 - Piso 8</p>
+            <p>San Miguel</p>
+            <p>Edificio Centro Comercial Monroy y Velez # 8350</p>
+            <br />
+          </div>
+          <div className={map_c}>
+            <iframe
+              title="google map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.7129280853162!2d-68.07746273475776!3d-16.54248475567715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21131fdcbe63%3A0x7efd00803d883f20!2sEdif.%20Monroy%20y%20velez!5e0!3m2!1sen!2sbo!4v1643825458108!5m2!1sen!2sbo" width="100%" height="300" style={{ border: 0 }} allowFullScreen={false} loading="lazy"></iframe>
+          </div>
+        </div >
+      </div >
+
+      < ContactBox />
+
+
+    </div >
   );
 }
 
@@ -119,7 +155,7 @@ export const getStaticProps = async (ctx) => {
     {
       name: 'Roberto Aguilar G.',
       picture: 'roberto.jpg',
-      testimonial: 'Cillum occaecat incididunt cupidatat fugiat occaecat proident culpa excepteur ut sunt sunt irure ut. Aliquip minim aute enim ex. Sunt cillum ipsum minim est dolor. Nisi proident qui laboris exercitation laboris do dolore aliquip. Occaecat fugiat aliqua anim culpa ea et duis reprehenderit.',
+      testimonial: 'Excelente profesional, obtuvimos los resultados deseados en el tiempo acordado. Totalmente recomendada.',
     },
     {
       name: 'Gabriela Carranza S.',
@@ -142,12 +178,27 @@ export const getStaticProps = async (ctx) => {
       testimonial: 'El dolor de espalda que tenia era insoportable, no me permitia realizar mis actividades cotidianas. La licenciada no solo alivio mi dolor de espalda sino que mejoro mi postura y ahora me veo mucho mejor.',
     }
 
-  ]
+  ];
 
-  return {
-    props: {
-      data: {
-        clientsOpinion
+  try {
+    const res1 = await fetch(`${process.env.BASE_API_URL}/nicole-blog/post/pagination?offset=0&limit=3`);
+    const posts = await res1.json();
+
+    return {
+      props: {
+        data: {
+          clientsOpinion,
+          posts: posts.posts
+        }
+      }
+    }
+  } catch (error) {
+    return {
+      props: {
+        data: {
+          clientsOpinion,
+          posts: []
+        }
       }
     }
   }

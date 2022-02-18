@@ -9,7 +9,7 @@ const Services = () => {
                 <h3>¿Qué servicios ofrezco?</h3>
                 <p>La Fisioterapia es una disciplina del área de salud que tiene como objetivo diagnosticar, prevenir, tratar y/o rehabilitar diferentes tipos de dolencias, tanto agudas como crónicas, por medio de las siguientes técnicas especializadas:</p>
                 <p>Crioterapia, Termoterapia, Masoterápia, Fisioterapia Respiratoria y Cinesiterapia.</p>
-                <ButtonLinkAnimation text={'Más información'} toURL={'/servicios'} />
+                <ButtonLinkAnimation text={'Ir a Servicios'} toURL={'/servicios'} />
             </div>
         </div>
     );

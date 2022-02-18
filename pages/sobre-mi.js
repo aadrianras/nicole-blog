@@ -2,17 +2,32 @@
 import ValueCard from '../components/cards/ValueCard';
 import ContactBox from '../components/contact/ContactBox';
 import Services from '../components/services/Services';
+import Lottie from "lottie-react";
+import doctorLottie from '../public/lotties/doctor.json';
 
-import { grid, grid_top, mg_bottom, mg_center, greeting, collage, hi, history, hands, values, objective, stethoscope } from './sobre-mi.module.css';
+import { grid, grid_top, mg_bottom, mg_center, greeting, collage, hi, history, hands, values, objective, lottie } from './sobre-mi.module.css';
+import { NextSeo } from 'next-seo';
+
 
 const sobreMi = () => {
     return (
         <main>
+            {/* SEO */}
+            <NextSeo
+                title="Fisioterapeuta Nicole Azurduy | Sobre mi"
+                description="Servicios profesionales en fisioterapia y kinesiología Nicole Azurduy. Ubicada en la ciudad de La Paz, Bolivia."
+                canonical="https://www.nicoleazurduy.com/sobre-mi"
+                openGraph={{
+                    url: 'https://www.nicoleazurduy.com/sobre-mi',
+                    title: 'Fisioterapeuta Nicole Azurduy | Sobre mi',
+                    description: 'Conoce a la fisioterapeuta y kinesiologa Nicole Azurduy. Ubicada en la ciudad de La Paz, Bolivia.',
+                }}
+            />
 
             <div className={`${grid} ${greeting} ${mg_bottom}`}>
                 <div className={hi}>
                     <h2>¡Hola!</h2>
-                    <p>Que bueno que desees conocerme. Soy Fisioterapeuta y Kinesiologa, ademas me encuentro cursado la carrera de Medicina. Estoy casada y soy madre. En mi tiempo libre, me encanta escuchar música ranchera mientras conduzco mi motocicleta o jugar a las cartas con mi familia. Finalmente, lo que más felicidad me otorga es poder trabajar en lo que me apasiona, ayudando a las personas.</p>
+                    <p>Qué bueno que desees conocerme. Soy Fisioterapeuta y Kinesióloga, además me encuentro cursado la carrera de Medicina. Estoy casada y soy madre. En mi tiempo libre, me encanta escuchar música ranchera mientras conduzco mi motocicleta o jugar a las cartas con mi familia. Finalmente, lo que más felicidad me otorga es poder trabajar en lo que me apasiona, ayudando a las personas.</p>
                 </div>
                 <div className={collage}>
                     <img className={mg_center} src='/images/collage.png' alt='Collage Nicole Azurduy Fisioterapeuta' />
@@ -45,7 +60,7 @@ const sobreMi = () => {
                     <ValueCard
                         image='f3.png'
                         title='Empatia'
-                        text='Siempre estoy conciente sobre los sentimientos y deseos de mis pacientes.'
+                        text='Siempre estoy consciente sobre los sentimientos y deseos de mis pacientes.'
                     />
                 </div>
             </div>
@@ -53,9 +68,15 @@ const sobreMi = () => {
             <div className={`${grid} ${mg_bottom}`}>
                 <div className={objective}>
                     <h2>Mi objetivo</h2>
-                    <p>Mi objetivo principal es el crecimiento profesional, mediante constantes capacitaciones y especializaciones, tanto en Fisioterapia como en Medicína.</p>
+                    <p>Mi objetivo principal es el crecimiento profesional, mediante constantes capacitaciones, especializaciones y experiencias, tanto en Fisioterapia como en Medicína. Todo con la finalidad de poder aplicar estos conocimientos y técnicas en beneficio de los pacientes.</p>
                 </div>
-                <img className={`${mg_center} ${stethoscope}`} src='/images/med.png' alt='Stethoscope' />
+                {/* <img className={`${mg_center} ${stethoscope}`} src='/images/med.png' alt='Stethoscope' /> */}
+                <Lottie
+                    animationData={doctorLottie}
+                    className={lottie}
+                    loop={true}
+                    autoplay={true}
+                />
             </div>
 
 
