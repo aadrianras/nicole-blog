@@ -1,63 +1,53 @@
 .container {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-		url(/images/bg.jpg);
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 4rem 1rem;
-	position: relative;
-	z-index: 1;
-}
-
-.container > * {
-	color: var(--cl4);
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 4rem 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .text {
-	margin-bottom: 1rem;
-	z-index: 5;
+  margin-bottom: 1.5rem;
+  z-index: 5;
 }
 
 .button {
-	background-color: var(--cl2);
-	border-radius: 0.25rem;
-	height: 50px;
-	max-width: 425px;
-	padding: 1rem;
-	width: 100%;
-	text-align: center;
-	transition: all 0.3s ease;
-	z-index: 5;
+  background-color: var(--cl2);
+  border-radius: 0.25rem;
+  height: 50px;
+  max-width: 425px;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  z-index: 5;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .button > svg {
-	flex: 0 0 2rem;
+  flex: 0 0 2rem;
 }
 
 .button:hover {
-	transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 600px) {
-	.container {
-		height: 400px;
-		text-align: center;
-		padding: 3rem;
+  .container {
+    height: 400px;
+    text-align: center;
 
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		justify-content: center;
-	}
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-	.button {
-		max-width: 350px;
-	}
+  .button {
+    max-width: 18rem;
+  }
 }

@@ -1,0 +1,21 @@
+.container {
+  background-color: var(--cl2);
+  border-radius: 0.25rem;
+  display: block;
+  height: 50px;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    max-width: 18rem;
+  }
+}
