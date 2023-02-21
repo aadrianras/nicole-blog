@@ -89,11 +89,9 @@ const Post = ({ post }) => {
 
             <div className={content_s} dangerouslySetInnerHTML={{ __html: unescapedContent2 }}></div>
 
-            <Link href='/blog'>
-                <a className={return_link}>
-                    <FontAwesomeIcon icon={faLongArrowAltLeft} />
-                    Volver al blog
-                </a>
+            <Link href='/blog' className={return_link}>
+
+                <FontAwesomeIcon icon={faLongArrowAltLeft} />Volver al blog
             </Link>
         </div>
     );

@@ -23,79 +23,77 @@ const NavBar = () => {
         return () => window.removeEventListener('click', handleClick);
     });
 
-    return (
-        <>
-            {
-                displayMenu
-                &&
-                (
+    return <>
+        {
+            displayMenu
+            &&
+            (
 
-                    <div className={`${menu} animate__animated animate__fadeInRightBig`}>
-                        <div className={close_button_c}>
-                            <button className={close_button} onClick={() => setDisplayMenu(false)}>
-                                <FontAwesomeIcon icon={faTimes} className={close_icon} />
-                            </button>
-                        </div>
-                        <div className={menu_items}>
+                <div className={`${menu} animate__animated animate__fadeInRightBig`}>
+                    <div className={close_button_c}>
+                        <button className={close_button} onClick={() => setDisplayMenu(false)}>
+                            <FontAwesomeIcon icon={faTimes} className={close_icon} />
+                        </button>
+                    </div>
+                    <div className={menu_items}>
+                        <Link href='/' className={logo_menu}>
+
+                            <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
+
+                        </Link>
+                        <div>
                             <Link href='/'>
-                                <a className={logo_menu}>
-                                    <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
-                                </a>
+
+                                <p className={`${link} ${pathname === '/' ? selected : ''}`}>Inicio</p>
+
                             </Link>
-                            <div>
-                                <Link href='/'>
-                                    <a>
-                                        <p className={`${link} ${pathname === '/' ? selected : ''}`}>Inicio</p>
-                                    </a>
-                                </Link>
-                                <Link href='/sobre-mi'>
-                                    <a>
-                                        <p className={`${link} ${pathname === '/sobre-mi' ? selected : ''}`}>Sobre mí</p>
-                                    </a>
-                                </Link>
-                                <Link href='/servicios'>
-                                    <a>
-                                        <p className={`${link} ${pathname === '/servicios' ? selected : ''}`}>Servicios</p>
-                                    </a>
-                                </Link>
-                                <Link href='/blog'>
-                                    <a>
-                                        <p className={`${link} ${last_link} ${pathname === '/blog' ? selected : ''}`}>Blog</p>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div className={follow_c}>
-                                <p className={follow}>Sigueme en</p>
-                                <a
-                                    className={facebook}
-                                    href="https://www.facebook.com/fisioterapia.nicole.azurduy"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <FontAwesomeIcon icon={faFacebookSquare} className={icon} />
-                                    Facebook
-                                </a>
-                            </div>
+                            <Link href='/sobre-mi'>
+
+                                <p className={`${link} ${pathname === '/sobre-mi' ? selected : ''}`}>Sobre mí</p>
+
+                            </Link>
+                            <Link href='/servicios'>
+
+                                <p className={`${link} ${pathname === '/servicios' ? selected : ''}`}>Servicios</p>
+
+                            </Link>
+                            <Link href='/blog'>
+
+                                <p className={`${link} ${last_link} ${pathname === '/blog' ? selected : ''}`}>Blog</p>
+
+                            </Link>
+                        </div>
+                        <div className={follow_c}>
+                            <p className={follow}>Sigueme en</p>
+                            <a
+                                className={facebook}
+                                href="https://www.facebook.com/fisioterapia.nicole.azurduy"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faFacebookSquare} className={icon} />
+                                Facebook
+                            </a>
                         </div>
                     </div>
-                )
-            }
+                </div>
+            )
+        }
 
-            <nav className={container}>
-                <Link href='/'>
-                    <a className={logo}>
-                        <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
-                    </a>
-                </Link>
-                <p
-                    className={menu_button}
-                    onClick={() => setDisplayMenu(true)}
-                >
-                    Menu
-                </p>
-            </nav>
-        </>
-    );
+        <nav className={container}>
+            <Link href='/' className={logo}>
+
+                <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
+
+            </Link>
+            <p
+                className={menu_button}
+                onClick={() => setDisplayMenu(true)}
+            >
+                Menu
+            </p>
+        </nav>
+    </>;
 }
 
 export default NavBar;

@@ -9,10 +9,10 @@ const Footer = () => {
     return (
         <footer className={container}>
             <div className={logo_c}>
-                <Link href='/'>
-                    <a className={logo}>
-                        <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
-                    </a>
+                <Link href='/' className={logo}>
+
+                    <Image src='/images/logo.png' alt='Logo Nicole Azurduy' layout="fill" objectFit="contain" />
+
                 </Link>
                 <a
                     className={facebook}
@@ -25,8 +25,8 @@ const Footer = () => {
                 </a>
             </div>
             <div className={legal_c}>
-                <Link href='/politica-de-privacidad'>
-                    <a className={legal} >POLÍTICA DE PRIVACIDAD</a>
+                <Link href='/politica-de-privacidad' className={legal}>
+                    POLÍTICA DE PRIVACIDAD
                 </Link>
             </div>
             <p className={holos}>

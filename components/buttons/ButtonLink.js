@@ -4,11 +4,11 @@ import { container } from './ButtonLink.module.css';
 
 const ButtonLink = ({ text, toURL }) => {
   return (
-    <Link href={toURL}>
-      <a className={container}>
-        <span>{text}</span>
-      </a>
-    </Link>
+    (<Link href={toURL} className={container}>
+
+      <span>{text}</span>
+
+    </Link>)
   );
 };
 

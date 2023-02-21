@@ -26,8 +26,8 @@ const BlogPostCard = ({ post }) => {
             <p className={sum_s}>{post.summary}</p>
             <div className={image_link}>
                 <img ref={imageRef} className={`${image} animate__animated animate__fadeIn`} src={post.coverImage} alt={post.title} />
-                <Link href={`/blog/${post.metaTitle}`}>
-                    <a className={link_s}>Leer artículo</a>
+                <Link href={`/blog/${post.metaTitle}`} className={link_s}>
+                    Leer artículo
                 </Link>
             </div>
         </div>
