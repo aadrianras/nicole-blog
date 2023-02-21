@@ -19,6 +19,9 @@ module.exports = {
   images: {
     domains: ['res.cloudinary.com'],
   },
+  experimental: {
+    appDir: true,
+  },
   async headers() {
     return [
       {
